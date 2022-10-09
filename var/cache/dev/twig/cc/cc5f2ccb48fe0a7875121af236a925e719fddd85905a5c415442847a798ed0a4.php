@@ -112,6 +112,6 @@ class __TwigTemplate_3f9140e351439c7be4430e46f142d863c8f962e991e587a266623f55ea6
     {{ form_widget(form) }}
     {{ form_end(form) }}
 </div>
-{% endblock %}", "brand_management/update.html.twig", "C:\\Users\\KHOI\\Downloads\\KTK-Shop\\templates\\brand_management\\update.html.twig");
+{% endblock %}", "brand_management/update.html.twig", "C:\\Users\\KHOI\\OneDrive\\Documents\\Greenwich\\1644 - Cloud Computing\\ATN-Shop\\templates\\brand_management\\update.html.twig");
     }
 }

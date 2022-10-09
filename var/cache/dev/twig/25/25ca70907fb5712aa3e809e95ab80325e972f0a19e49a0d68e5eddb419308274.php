@@ -56,23 +56,24 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<div class=\"container\">
+        echo "<main style=\"min-height: calc(100vh - 116px - 56px - 246px);\">
+<div class=\"container\">
   <H2>Compare Product</H2>
   <br>
   <div class=\"row\" style=\"background-color: aliceblue;\">
      ";
-        // line 8
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 8, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 9, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 9
+            // line 10
             echo "        <div class=\"col-md-6\">
             <div class=\"card\">
             <br>
               <img 
                 src=\"../img/";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productimage", [], "any", false, false, false, 13), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productimage", [], "any", false, false, false, 14), "html", null, true);
             echo "\"
                 class=\"card-img-top\"
                 alt=\"Not image available\" style=\"margin: auto;
@@ -80,16 +81,16 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
               />
               <div class=\"card-body align-self-center\">
                 <h4 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 20), "html", null, true);
             echo "</h4>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 20), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 21), "html", null, true);
             echo " VND</h6>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productdes", [], "any", false, false, false, 21), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productdes", [], "any", false, false, false, 22), "html", null, true);
             echo "</h6>
               </div>
             </div>
@@ -100,10 +101,11 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
+        // line 28
         echo "  </div>  
 </div>
 <br>
+</main>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +124,7 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
 
     public function getDebugInfo()
     {
-        return array (  104 => 27,  92 => 21,  88 => 20,  84 => 19,  75 => 13,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  105 => 28,  93 => 22,  89 => 21,  85 => 20,  76 => 14,  70 => 10,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -130,6 +132,7 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
+<main style=\"min-height: calc(100vh - 116px - 56px - 246px);\">
 <div class=\"container\">
   <H2>Compare Product</H2>
   <br>
@@ -156,6 +159,7 @@ class __TwigTemplate_e30da910c202242c5b86c2170b0ba169400125033ad5a90d4b1cf461db6
   </div>  
 </div>
 <br>
-{% endblock %}", "compare_product/index.html.twig", "C:\\Users\\KHOI\\Downloads\\KTK-Shop\\templates\\compare_product\\index.html.twig");
+</main>
+{% endblock %}", "compare_product/index.html.twig", "C:\\Users\\KHOI\\OneDrive\\Documents\\Greenwich\\1644 - Cloud Computing\\ATN-Shop\\templates\\compare_product\\index.html.twig");
     }
 }

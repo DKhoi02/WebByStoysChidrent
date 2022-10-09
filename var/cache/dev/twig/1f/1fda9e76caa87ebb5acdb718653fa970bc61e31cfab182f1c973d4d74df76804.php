@@ -187,6 +187,6 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
             </div>
     </div>
     </main>
-{% endblock %}", "brand_management/index.html.twig", "C:\\Users\\KHOI\\Downloads\\KTK-Shop\\templates\\brand_management\\index.html.twig");
+{% endblock %}", "brand_management/index.html.twig", "C:\\Users\\KHOI\\OneDrive\\Documents\\Greenwich\\1644 - Cloud Computing\\ATN-Shop\\templates\\brand_management\\index.html.twig");
     }
 }
