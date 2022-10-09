@@ -1,0 +1,22 @@
+<?php //App%255CController%255CAccountMamagementController%2523registerAction
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/addaccountadmin',
+            ],
+            'name' => [
+                'addaccountadmin',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];
