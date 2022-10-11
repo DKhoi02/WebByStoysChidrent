@@ -450,6 +450,7 @@ class ComposerStaticInite07307f529fa7b5ee7783dadfe704cc4
         'App\\Repository\\OrderDetailRepository' => __DIR__ . '/../..' . '/src/Repository/OrderDetailRepository.php',
         'App\\Repository\\OrderRepository' => __DIR__ . '/../..' . '/src/Repository/OrderRepository.php',
         'App\\Repository\\ProductRepository' => __DIR__ . '/../..' . '/src/Repository/ProductRepository.php',
+        'App\\Repository\\SupplierRepository' => __DIR__ . '/../..' . '/src/Repository/SupplierRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\LoginFormAuthenticator' => __DIR__ . '/../..' . '/src/Security/LoginFormAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

@@ -35,6 +35,7 @@ return array(
     'App\\Repository\\OrderDetailRepository' => $baseDir . '/src/Repository/OrderDetailRepository.php',
     'App\\Repository\\OrderRepository' => $baseDir . '/src/Repository/OrderRepository.php',
     'App\\Repository\\ProductRepository' => $baseDir . '/src/Repository/ProductRepository.php',
+    'App\\Repository\\SupplierRepository' => $baseDir . '/src/Repository/SupplierRepository.php',
     'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',
     'App\\Security\\LoginFormAuthenticator' => $baseDir . '/src/Security/LoginFormAuthenticator.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
