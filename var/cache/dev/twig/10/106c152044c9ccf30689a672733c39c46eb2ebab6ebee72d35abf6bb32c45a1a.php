@@ -104,7 +104,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
                                     ";
             // line 35
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["c"], "role", [], "any", false, false, false, 35));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["c"], "roles", [], "any", false, false, false, 35));
             foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
                 // line 36
                 echo "                                        ";
@@ -213,7 +213,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
                                     <td>{{c.id}}</td>
                                     <td>{{c.username}}</td>
                                     <td>
-                                    {% for row in c.role %}
+                                    {% for row in c.roles %}
                                         {{row}}
                                     {% endfor %}
                                     </td>

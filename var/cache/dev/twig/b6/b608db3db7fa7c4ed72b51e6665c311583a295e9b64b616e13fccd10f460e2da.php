@@ -31,7 +31,6 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
             'javascripts' => [$this, 'block_javascripts'],
             'nav' => [$this, 'block_nav'],
             'body' => [$this, 'block_body'],
-            'footer' => [$this, 'block_footer'],
         ];
     }
 
@@ -87,7 +86,6 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         $this->displayBlock('body', $context, $blocks);
         // line 101
         echo "        ";
-        $this->displayBlock('footer', $context, $blocks);
         // line 128
         echo "</html>
 ";
@@ -281,48 +279,6 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 101
-    public function block_footer($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
-
-        // line 102
-        echo "    <div class=\" text-center text-lg-start text-light\" style=\"background-color: rgb(255,105,180);\">
-  <div class=\"container p-4 \" >
-    <div class=\"row\">
-      <div class=\"col-lg-6 col-md-12 mb-4 mb-md-0\">
-        <h5 class=\"text-uppercase text-light\">Address</h5>
-
-        <p>
-            No. 160, 30/4 Street, An Phu Ward, Ninh Kieu District, Can Tho City
-        </p>
-        <div class = \"btn-social-icon\">
-            <h5 class=\"text-uppercase text-light\">Contact</h5>
-            <button type=\"button\" class=\"btn btn-social-icon btn-facebook\" style=\"background-color: #243996; color: aliceblue;\"><i class=\"fa fa-facebook\"></i></button>
-            <button type=\"button\" class=\"btn btn-social-icon btn-youtube\" style=\"background-color: #e71212; color: aliceblue;\"><i class=\"fa fa-youtube\"></i></button>                                        
-            <button type=\"button\" class=\"btn btn-social-icon btn-twitter\" style=\"background-color: #50d0e0; color: aliceblue;\"><i class=\"fa fa-twitter\"></i></button>
-            <button type=\"button\" class=\"btn btn-social-icon btn-dribbble\" style=\"background-color: #e050cdf1; color: aliceblue;\"><i class=\"fa fa-dribbble\"></i></button>
-            <button type=\"button\" class=\"btn btn-social-icon btn-linkedin\" style=\"background-color: #100797; color: aliceblue;\"><i class=\"fa fa-linkedin\"></i></button>
-            <button type=\"button\" class=\"btn btn-social-icon btn-instagram\" style=\"background-color: #f7672e; color: aliceblue;\"><i class=\"fa fa-instagram\"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class=\"text-center p-3 text-light\" style=\"background-color: rgb(255,105,180);\">© 2022 Copyright:
-<a class=\"text-light\" href=\"";
-        // line 124
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
-        echo "\">ATN_shop.Com</a>
-  </div>
-    </div>
-    ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "base.html.twig";
@@ -330,7 +286,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     public function getDebugInfo()
     {
-        return array (  316 => 124,  292 => 102,  285 => 101,  278 => 100,  271 => 99,  258 => 92,  252 => 89,  249 => 88,  247 => 87,  244 => 86,  239 => 84,  235 => 83,  232 => 82,  225 => 79,  221 => 78,  217 => 77,  212 => 75,  208 => 73,  206 => 72,  194 => 62,  191 => 61,  184 => 57,  180 => 56,  176 => 55,  172 => 54,  166 => 50,  163 => 49,  161 => 48,  156 => 46,  145 => 39,  141 => 36,  134 => 35,  124 => 29,  117 => 28,  107 => 25,  100 => 24,  92 => 128,  89 => 101,  86 => 99,  84 => 35,  78 => 31,  76 => 28,  73 => 27,  71 => 24,  54 => 9,  45 => 1,);
+        return array (  276 => 100,  269 => 99,  256 => 92,  250 => 89,  247 => 88,  245 => 87,  242 => 86,  237 => 84,  233 => 83,  230 => 82,  223 => 79,  219 => 78,  215 => 77,  210 => 75,  206 => 73,  204 => 72,  192 => 62,  189 => 61,  182 => 57,  178 => 56,  174 => 55,  170 => 54,  164 => 50,  161 => 49,  159 => 48,  154 => 46,  143 => 39,  139 => 36,  132 => 35,  122 => 29,  115 => 28,  105 => 25,  98 => 24,  90 => 128,  88 => 101,  85 => 99,  83 => 35,  77 => 31,  75 => 28,  72 => 27,  70 => 24,  53 => 9,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -435,7 +391,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         {% endblock %}
         {% block body %}
         {% endblock %}
-        {% block footer %}
+        {# {% block footer %}
     <div class=\" text-center text-lg-start text-light\" style=\"background-color: rgb(255,105,180);\">
   <div class=\"container p-4 \" >
     <div class=\"row\">
@@ -461,7 +417,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 <a class=\"text-light\" href=\"{{path('home_page')}}\">ATN_shop.Com</a>
   </div>
     </div>
-    {% endblock %}
+    {% endblock %} #}
 </html>
 ", "base.html.twig", "C:\\Users\\KHOI\\OneDrive\\Documents\\Greenwich\\1644 - Cloud Computing\\ATN-Shop\\templates\\base.html.twig");
     }
