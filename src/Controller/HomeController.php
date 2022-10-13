@@ -20,6 +20,19 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 class HomeController extends AbstractController
 {
+        /**
+     * @Route("/", name="home_page_index")
+     */
+    public function indexActions(ProductRepository $repo, CartRepository $cartrepo): Response
+    {
+        $product = $repo->findBy([
+            'Status' => 1
+        ]);
+        return $this->render("home_page/index.html.twig",[
+            'product' =>$product
+        ]);
+    }
+
     /**
      * @Route("/homepage", name="home_page")
      */

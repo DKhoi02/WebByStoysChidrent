@@ -14,6 +14,7 @@ return [
     'updatecart' => [['id'], ['_controller' => 'App\\Controller\\CartController::updateCartAction'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/updatecart']], [], [], []],
     'order' => [[], ['_controller' => 'App\\Controller\\CartController::orderAction'], [], [['text', '/order']], [], [], []],
     'app_compare_product' => [[], ['_controller' => 'App\\Controller\\CompareProductController::compareAction'], [], [['text', '/compare/product']], [], [], []],
+    'home_page_index' => [[], ['_controller' => 'App\\Controller\\HomeController::indexActions'], [], [['text', '/']], [], [], []],
     'home_page' => [[], ['_controller' => 'App\\Controller\\HomeController::indexAction'], [], [['text', '/homepage']], [], [], []],
     'productDetail' => [['id'], ['_controller' => 'App\\Controller\\HomeController::productDetailAction'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/homepage']], [], [], []],
     'search' => [[], ['_controller' => 'App\\Controller\\HomeController::searchAction'], [], [['text', '/search']], [], [], []],

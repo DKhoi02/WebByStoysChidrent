@@ -4650,7 +4650,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.um.mfyB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xvegmDO" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountMamagementController::indexAction" type="service_closure" id=".service_locator.BE_HSvK"/>
@@ -4666,6 +4666,7 @@
         <argument key="App\Controller\HomeController::changePasswordAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\HomeController::compareAction" type="service_closure" id=".service_locator.FvAKUV2"/>
         <argument key="App\Controller\HomeController::indexAction" type="service_closure" id=".service_locator._NTezu9"/>
+        <argument key="App\Controller\HomeController::indexActions" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController::productDetailAction" type="service_closure" id=".service_locator.OKj5qXB"/>
         <argument key="App\Controller\HomeController::profileAction" type="service_closure" id=".service_locator.kYedUCb"/>
         <argument key="App\Controller\HomeController::searchAction" type="service_closure" id=".service_locator.OKj5qXB"/>
@@ -4698,6 +4699,7 @@
         <argument key="App\Controller\HomeController:changePasswordAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\HomeController:compareAction" type="service_closure" id=".service_locator.FvAKUV2"/>
         <argument key="App\Controller\HomeController:indexAction" type="service_closure" id=".service_locator._NTezu9"/>
+        <argument key="App\Controller\HomeController:indexActions" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController:productDetailAction" type="service_closure" id=".service_locator.OKj5qXB"/>
         <argument key="App\Controller\HomeController:profileAction" type="service_closure" id=".service_locator.kYedUCb"/>
         <argument key="App\Controller\HomeController:searchAction" type="service_closure" id=".service_locator.OKj5qXB"/>
@@ -5063,12 +5065,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.um.mfyB"/>
+      <argument type="service" id=".service_locator.xvegmDO"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.um.mfyB"/>
+      <argument type="service" id=".service_locator.xvegmDO"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -5772,7 +5774,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.um.mfyB"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.xvegmDO"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -5789,7 +5791,7 @@
     <service id=".service_locator.oI4xawC" alias=".service_locator.lxu3CGC"/>
     <service id=".service_locator.sAnSFE3" alias=".service_locator.2POTX54"/>
     <service id=".service_locator.UTO.dP0" alias=".service_locator.OPHNw6z"/>
-    <service id=".service_locator.PWpdS1k" alias=".service_locator.um.mfyB"/>
+    <service id=".service_locator.PVtWKwd" alias=".service_locator.xvegmDO"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.wzYyd8q" alias=".service_locator.B2twlv9"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
