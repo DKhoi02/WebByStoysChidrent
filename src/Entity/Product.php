@@ -76,6 +76,16 @@ class Product
      */
     private $cartdetail;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $CostPrice;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Shop::class, inversedBy="product")
+     */
+    private $shop;
+
     public function __construct()
     {
         $this->Cartid = new ArrayCollection();
@@ -253,6 +263,30 @@ class Product
                 $cartdetail->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCostPrice(): ?int
+    {
+        return $this->CostPrice;
+    }
+
+    public function setCostPrice(?int $CostPrice): self
+    {
+        $this->CostPrice = $CostPrice;
+
+        return $this;
+    }
+
+    public function getShop(): ?Shop
+    {
+        return $this->shop;
+    }
+
+    public function setShop(?Shop $shop): self
+    {
+        $this->shop = $shop;
 
         return $this;
     }
