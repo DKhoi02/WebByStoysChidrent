@@ -138,7 +138,7 @@ class __TwigTemplate_722fba7382bb4638352ed2dc7753d17a82395fdab80d01589ea5f582e5b
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Productquantity", [], "any", false, false, false, 62), "html", null, true);
             echo " type=\"number\"
                       class=\"form-control form-control-sm\" style=\"width: 65px\"/>
-                    <input class=\"btn text-light\" style= \"background-color: rgba(13,92,182,255);\" type=\"submit\" value=\"Update\"/> 
+                    <input class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Update\"/> 
                 </form>                   
                   </div>
                   <div class=\"col-md-3 col-lg-2 col-xl-2 offset-lg-1\">
@@ -185,7 +185,7 @@ class __TwigTemplate_722fba7382bb4638352ed2dc7753d17a82395fdab80d01589ea5f582e5b
                     <a href=\"";
         // line 91
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("order");
-        echo "\" class=\"btn text-light \" style= \"background-color: rgba(13,92,182,255);\" type=\"submit\" value=\"Payment\" name=\"payment\">Order</a> 
+        echo "\" class=\"btn text-light \" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Payment\" name=\"payment\">Order</a> 
                 </form>
                 </div>
               </div>
@@ -282,7 +282,7 @@ class __TwigTemplate_722fba7382bb4638352ed2dc7753d17a82395fdab80d01589ea5f582e5b
                     <form class=\"d-flex\" method=\"GET\" action=\"/updatecart/{{c.id}}\">
                     <input id=\"form1\" min=\"1\" name=\"quantity\" value = {{c.Productquantity}} type=\"number\"
                       class=\"form-control form-control-sm\" style=\"width: 65px\"/>
-                    <input class=\"btn text-light\" style= \"background-color: rgba(13,92,182,255);\" type=\"submit\" value=\"Update\"/> 
+                    <input class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Update\"/> 
                 </form>                   
                   </div>
                   <div class=\"col-md-3 col-lg-2 col-xl-2 offset-lg-1\">
@@ -309,7 +309,7 @@ class __TwigTemplate_722fba7382bb4638352ed2dc7753d17a82395fdab80d01589ea5f582e5b
                     <h5><span></span>{{total}} VND</h5>
                   </div>
                   <form class=\"d-flex\" method=\"\">
-                    <a href=\"{{path('order')}}\" class=\"btn text-light \" style= \"background-color: rgba(13,92,182,255);\" type=\"submit\" value=\"Payment\" name=\"payment\">Order</a> 
+                    <a href=\"{{path('order')}}\" class=\"btn text-light \" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Payment\" name=\"payment\">Order</a> 
                 </form>
                 </div>
               </div>

@@ -87,13 +87,18 @@ class __TwigTemplate_4e0a8ad2e25505ec124ece14d72289b51dd468708d6095c9cd1a1d7b05e
                         <div><span class=\"product_info\"><span>Decription: ";
         // line 22
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 22, $this->source); })()), "Productdes", [], "any", false, false, false, 22), "html", null, true);
-        echo "</div>                        
+        echo "</div>   
+
+                        <div><span class=\"product_info\"><span>Shop address: ";
+        // line 24
+        echo twig_escape_filter($this->env, (isset($context["address"]) || array_key_exists("address", $context) ? $context["address"] : (function () { throw new RuntimeError('Variable "address" does not exist.', 24, $this->source); })()), "html", null, true);
+        echo "</div>                     
                         <hr class=\"singleline\">
                         <div class=\"card-body align-self-center\">
                             <a href=\"";
-        // line 25
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addcart", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 25, $this->source); })()), "id", [], "any", false, false, false, 25)]), "html", null, true);
-        echo "\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></a>
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addcart", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
+        echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></a>
                         </div>
                         </div>
                     </div>
@@ -123,7 +128,7 @@ class __TwigTemplate_4e0a8ad2e25505ec124ece14d72289b51dd468708d6095c9cd1a1d7b05e
 
     public function getDebugInfo()
     {
-        return array (  95 => 25,  89 => 22,  84 => 20,  79 => 18,  70 => 12,  59 => 3,  52 => 2,  35 => 1,);
+        return array (  100 => 27,  94 => 24,  89 => 22,  84 => 20,  79 => 18,  70 => 12,  59 => 3,  52 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -149,10 +154,12 @@ class __TwigTemplate_4e0a8ad2e25505ec124ece14d72289b51dd468708d6095c9cd1a1d7b05e
                         
                         <div> <span class=\"product_price\"></span>Price: {{product.Price}} VND</div>
                         
-                        <div><span class=\"product_info\"><span>Decription: {{product.Productdes}}</div>                        
+                        <div><span class=\"product_info\"><span>Decription: {{product.Productdes}}</div>   
+
+                        <div><span class=\"product_info\"><span>Shop address: {{address}}</div>                     
                         <hr class=\"singleline\">
                         <div class=\"card-body align-self-center\">
-                            <a href=\"{{ path('addcart', {'id' : product.id})}}\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></a>
+                            <a href=\"{{ path('addcart', {'id' : product.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></a>
                         </div>
                         </div>
                     </div>

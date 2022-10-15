@@ -51,8 +51,11 @@ class HomeController extends AbstractController
     public function productDetailAction(ProductRepository $repo, int $id): Response
     {
         $product = $repo->find($id);
+        $address = $repo->addressProduct($id);
+        $add = $address[0]['address'];
         return $this->render("home_page/productdetail.html.twig",[
-            'product' =>$product
+            'product' =>$product,
+            'address' => $add
         ]);
     }
 
@@ -103,73 +106,6 @@ class HomeController extends AbstractController
         return $this->render('home_page/profile.html.twig', [
             'form' => $form->createView()
         ]);       
-    }
-
-    /**
-     * @Route("/compare", name="app_compare")
-     */
-    public function compareAction(ProductRepository $repo, CartRepository $cartRepo, Request $req): Response
-    {
-        $a = $req->query->get('proA');
-        $b = $req->query->get('proB');
-        $compareProduct = $repo->compareProducts($a, $b);
-        return $this->render('compare_product/index.html.twig', [
-        'product' => $compareProduct
-        ]);
-    }
-
-    /**
-     * @Route("/confirmpassword", name="confirmpassword")
-     */
-    public function confirmPasswordAction(): Response
-    {
-        return $this->render('home_page/confirmpassword.htm.twig');
-    }
-
-    /**
-     * @Route("/temp", name="temp", methods="POST")
-     */
-    public function tempAction(Request $req, 
-    UserPasswordHasherInterface $hasher,
-    ManagerRegistry $reg, UserRepository $urepo): Response
-    {
-        $user = $this->getUser();
-        $oldpwd = $req->request->get('password');
-        $a = $hasher->isPasswordValid($user,$oldpwd);
-        if($a == true){
-            return $this->redirectToRoute('changepassword');
-        }
-        else{
-            return $this->redirectToRoute('confirmpassword');
-        }
-    }
-    /**
-     * @Route("/changepassword", name="changepassword")
-     */
-    public function changePasswordAction(Request $req, 
-    UserPasswordHasherInterface $hasher,
-    ManagerRegistry $reg, UserRepository $urepo ): Response
-    {
-        $user = $this->get('security.token_storage')->getToken()->getUser();
-        $user->getId();
-        $user = $urepo->find($user);
-        $form = $this->createForm(ChangePassType::class, $user);
-        $form->handleRequest($req);
-        $entity = $reg->getManager();
-
-        if($form->isSubmitted() && $form->isValid()){
-            $user->setPassword($hasher->hashPassword($user,
-            $form->get('password')->getData()));
-
-            $entity->persist($user);
-            $entity->flush();
-
-            return $this->redirectToRoute('home_page');
-        }
-        
-        return $this->render('home_page/changepass.html.twig', [
-            'form' => $form->createView()
-        ]);  
     }
 
 }

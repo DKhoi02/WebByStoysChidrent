@@ -542,4 +542,6 @@ ul {
     padding-bottom: 0px;
 }
 
-
+.dropdown-menu > li > a:hover {
+    background-color:red !important;
+}

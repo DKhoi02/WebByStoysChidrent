@@ -62,7 +62,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
 <a href=\"";
         // line 7
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pro_manage");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     ";
         // line 8
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), 'form_start');
@@ -94,7 +94,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
     </script>
     </div> 
     <br>
-    <input type=\"submit\" value=\"Submit\" class=\"btn text-light\" style=\"background-color: rgba(26,148,255,255);\"/>
+    <input type=\"submit\" value=\"Submit\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\"/>
     ";
         // line 28
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
@@ -130,7 +130,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
 <div  class=\"container\">
 <h1> Product Manage</h1>
 <br>
-<a href=\"{{path('app_pro_manage')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+<a href=\"{{path('app_pro_manage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}
     <div class=\"form-group\">
@@ -150,7 +150,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
     </script>
     </div> 
     <br>
-    <input type=\"submit\" value=\"Submit\" class=\"btn text-light\" style=\"background-color: rgba(26,148,255,255);\"/>
+    <input type=\"submit\" value=\"Submit\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\"/>
     {{ form_end(form) }}
     <br>  
 </div>

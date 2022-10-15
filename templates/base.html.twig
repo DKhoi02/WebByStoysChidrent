@@ -47,11 +47,11 @@
         </li>
         {% if app.user %}
         {% if is_granted('ROLE_ADMIN')  %}
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" style="hover:background-color:red;">
                         <a class="nav-link dropdown-toggle text-light"  href="#" id="navbarDropdown" 
                         role="button" data-bs-toggle="dropdown" aria-expanded="false"> Management</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{path('app_account_mamagement')}}">Account Management</a></li>
+                            <li><a class="dropdown-item" href="{{path('app_account_mamagement')}}" style="hover:background-color:red;">Account Management</a></li>
                             <li><a class="dropdown-item" href="{{path('app_order_management')}}">Order Management</a></li>
                             <li><a class="dropdown-item" href="{{path('app_brand_management')}}">Brand Management</a></li>
                             <li><a class="dropdown-item" href="{{path('app_pro_manage')}}">Product Management</a></li>

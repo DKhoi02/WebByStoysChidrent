@@ -161,14 +161,14 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
             echo "        ";
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                 // line 50
-                echo "        <li class=\"nav-item dropdown\">
+                echo "        <li class=\"nav-item dropdown\" style=\"hover:background-color:red;\">
                         <a class=\"nav-link dropdown-toggle text-light\"  href=\"#\" id=\"navbarDropdown\" 
                         role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"> Management</a>
                         <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                             <li><a class=\"dropdown-item\" href=\"";
                 // line 54
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account_mamagement");
-                echo "\">Account Management</a></li>
+                echo "\" style=\"hover:background-color:red;\">Account Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
                 // line 55
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_order_management");
@@ -344,11 +344,11 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         </li>
         {% if app.user %}
         {% if is_granted('ROLE_ADMIN')  %}
-        <li class=\"nav-item dropdown\">
+        <li class=\"nav-item dropdown\" style=\"hover:background-color:red;\">
                         <a class=\"nav-link dropdown-toggle text-light\"  href=\"#\" id=\"navbarDropdown\" 
                         role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"> Management</a>
                         <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                            <li><a class=\"dropdown-item\" href=\"{{path('app_account_mamagement')}}\">Account Management</a></li>
+                            <li><a class=\"dropdown-item\" href=\"{{path('app_account_mamagement')}}\" style=\"hover:background-color:red;\">Account Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_order_management')}}\">Order Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_brand_management')}}\">Brand Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_pro_manage')}}\">Product Management</a></li>

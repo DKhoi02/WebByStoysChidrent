@@ -4626,13 +4626,6 @@
         <argument key="repo" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.FvAKUV2" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="cartRepo" type="service_closure" id="App\Repository\CartRepository"/>
-        <argument key="repo" type="service_closure" id="App\Repository\ProductRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.RUqM8wP" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4678,7 +4671,7 @@
         <argument key="repo" type="service_closure" id="App\Repository\ShopRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.GkJ2tSV" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xPEkWmI" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountMamagementController::indexAction" type="service_closure" id=".service_locator.BE_HSvK"/>
@@ -4691,14 +4684,11 @@
         <argument key="App\Controller\CartController::indexAction" type="service_closure" id=".service_locator.2jRONmM"/>
         <argument key="App\Controller\CartController::orderAction" type="service_closure" id=".service_locator.QMLF2ya"/>
         <argument key="App\Controller\CartController::updateCartAction" type="service_closure" id=".service_locator.jqpXhhX"/>
-        <argument key="App\Controller\HomeController::changePasswordAction" type="service_closure" id=".service_locator.tek_f4z"/>
-        <argument key="App\Controller\HomeController::compareAction" type="service_closure" id=".service_locator.FvAKUV2"/>
         <argument key="App\Controller\HomeController::indexAction" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController::indexActions" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController::productDetailAction" type="service_closure" id=".service_locator.OKj5qXB"/>
         <argument key="App\Controller\HomeController::profileAction" type="service_closure" id=".service_locator.kYedUCb"/>
         <argument key="App\Controller\HomeController::searchAction" type="service_closure" id=".service_locator.OKj5qXB"/>
-        <argument key="App\Controller\HomeController::tempAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\OrderHistoryController::indexAction" type="service_closure" id=".service_locator.RUqM8wP"/>
         <argument key="App\Controller\OrderManagementController::indexAction" type="service_closure" id=".service_locator.WdOpP7C"/>
         <argument key="App\Controller\OrderManagementController::orderDetailAction" type="service_closure" id=".service_locator.lxu3CGC"/>
@@ -4726,14 +4716,11 @@
         <argument key="App\Controller\CartController:indexAction" type="service_closure" id=".service_locator.2jRONmM"/>
         <argument key="App\Controller\CartController:orderAction" type="service_closure" id=".service_locator.QMLF2ya"/>
         <argument key="App\Controller\CartController:updateCartAction" type="service_closure" id=".service_locator.jqpXhhX"/>
-        <argument key="App\Controller\HomeController:changePasswordAction" type="service_closure" id=".service_locator.tek_f4z"/>
-        <argument key="App\Controller\HomeController:compareAction" type="service_closure" id=".service_locator.FvAKUV2"/>
         <argument key="App\Controller\HomeController:indexAction" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController:indexActions" type="service_closure" id=".service_locator._NTezu9"/>
         <argument key="App\Controller\HomeController:productDetailAction" type="service_closure" id=".service_locator.OKj5qXB"/>
         <argument key="App\Controller\HomeController:profileAction" type="service_closure" id=".service_locator.kYedUCb"/>
         <argument key="App\Controller\HomeController:searchAction" type="service_closure" id=".service_locator.OKj5qXB"/>
-        <argument key="App\Controller\HomeController:tempAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\OrderHistoryController:indexAction" type="service_closure" id=".service_locator.RUqM8wP"/>
         <argument key="App\Controller\OrderManagementController:indexAction" type="service_closure" id=".service_locator.WdOpP7C"/>
         <argument key="App\Controller\OrderManagementController:orderDetailAction" type="service_closure" id=".service_locator.lxu3CGC"/>
@@ -5105,12 +5092,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.GkJ2tSV"/>
+      <argument type="service" id=".service_locator.xPEkWmI"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.GkJ2tSV"/>
+      <argument type="service" id=".service_locator.xPEkWmI"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -5814,7 +5801,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.GkJ2tSV"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.xPEkWmI"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -5827,11 +5814,10 @@
     <service id=".service_locator.3mfC_KC" alias=".service_locator.jqpXhhX"/>
     <service id=".service_locator.1sqsZFx" alias=".service_locator.QMLF2ya"/>
     <service id=".service_locator.KjhHEvt" alias=".service_locator._NTezu9"/>
-    <service id=".service_locator.YE2hx_V" alias=".service_locator.FvAKUV2"/>
     <service id=".service_locator.oI4xawC" alias=".service_locator.lxu3CGC"/>
     <service id=".service_locator.sAnSFE3" alias=".service_locator.2POTX54"/>
     <service id=".service_locator.UTO.dP0" alias=".service_locator.OPHNw6z"/>
-    <service id=".service_locator.573c_KC" alias=".service_locator.GkJ2tSV"/>
+    <service id=".service_locator.pFa_DZB" alias=".service_locator.xPEkWmI"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.CNEXma5" alias=".service_locator.9k6TMXA"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -5867,7 +5853,6 @@
     <service id=".service_locator.smVUqdA" alias=".service_locator._NTezu9"/>
     <service id=".service_locator.rGBvM75" alias=".service_locator.OKj5qXB"/>
     <service id=".service_locator.s6edP8_" alias=".service_locator.kYedUCb"/>
-    <service id=".service_locator.tmXiFN." alias=".service_locator.FvAKUV2"/>
     <service id=".service_locator.NwmVVd8" alias=".service_locator.RUqM8wP"/>
     <service id=".service_locator.W3PhgPO" alias=".service_locator.WdOpP7C"/>
     <service id=".service_locator.XjUKqpt" alias=".service_locator.lxu3CGC"/>

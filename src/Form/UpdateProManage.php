@@ -59,9 +59,14 @@ class UpdateProManageType extends AbstractType{
             [
                 'choices' => [
                     'Available' => '1',
-                    'Unavailable' => '0',
+                    'Unavailable' => '0'
                 ],
-                'expanded' => true
+                'expanded' => true,
+                'choice_attr' => [
+                    'Available' => [
+                        'data-color' => 'Red'
+                    ]
+                ]
             ]);
     }
 }

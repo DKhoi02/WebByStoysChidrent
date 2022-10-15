@@ -98,7 +98,7 @@ class __TwigTemplate_96961e61f5c2a030c11a7616ab24c01e5934a21067174b636358ea9387f
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
             <br>
-            <button class=\"btn btn-lg btn-primary\" type=\"submit\">Sign in</button>
+            <button class=\"btn text-light\" type=\"submit\" style=\"background-color: rgb(255,105,180);\">Sign in</button>
         </div>
     </div>
 </div>
@@ -150,7 +150,7 @@ class __TwigTemplate_96961e61f5c2a030c11a7616ab24c01e5934a21067174b636358ea9387f
             <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required placeholder=\"Password\">
             <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
             <br>
-            <button class=\"btn btn-lg btn-primary\" type=\"submit\">Sign in</button>
+            <button class=\"btn text-light\" type=\"submit\" style=\"background-color: rgb(255,105,180);\">Sign in</button>
         </div>
     </div>
 </div>

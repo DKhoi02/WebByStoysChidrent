@@ -90,7 +90,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
                 <a href=\"";
             // line 22
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 22)]), "html", null, true);
-            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\">";
+            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 22), "html", null, true);
             echo "</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
@@ -100,54 +100,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
                 <a href=\"";
             // line 24
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            echo "\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
-                                  <form>
-                  <input class=\"form-check-input\" name =\"checkbox\" type=\"checkbox\" value = \"";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 26), "html", null, true);
-            echo "\" id=\"checkBox";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 26), "html", null, true);
-            echo "\">
-                  <label class=\"form-check-label\" for=\"flexCheckDefault\">
-                    Add to compare
-                  </label>
-                <script language=\"javascript\">
-                  var compareList = [];
-                    document.getElementById(\"checkBox";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 32), "html", null, true);
-            echo "\").onclick = function(e){
-                      if (this.checked){
-                        if(compareList.length < 2)
-                        {
-                          compareList.unshift(";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 36), "html", null, true);
-            echo ");
-                          document.getElementById(\"proA\").value = compareList[0];
-                          document.getElementById(\"proB\").value = compareList[1];
-                        }
-                        else{
-                          alert('Max 2 products');
-                          document.getElementById(\"checkBox";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 42), "html", null, true);
-            echo "\").checked = false;
-                        }
-                      }
-                      else{
-                        for (i = 0; i < compareList.length; ++i){
-                          if(compareList[i] == ";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 47), "html", null, true);
-            echo "){
-                            compareList.splice(i, 1);
-                          }
-                        }
-                      }
-                };
-                </script>
-                </form>
+            echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
               </div>
             </div>
         </div>
@@ -157,7 +110,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 60
+        // line 30
         echo "  </div>  
 </div>
 </main>
@@ -179,7 +132,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
 
     public function getDebugInfo()
     {
-        return array (  161 => 60,  142 => 47,  134 => 42,  125 => 36,  118 => 32,  107 => 26,  102 => 24,  98 => 23,  92 => 22,  83 => 16,  78 => 13,  74 => 12,  70 => 10,  63 => 7,  59 => 5,  52 => 4,  35 => 2,);
+        return array (  114 => 30,  102 => 24,  98 => 23,  92 => 22,  83 => 16,  78 => 13,  74 => 12,  70 => 10,  63 => 7,  59 => 5,  52 => 4,  35 => 2,);
     }
 
     public function getSourceContext()
@@ -205,39 +158,9 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
                 width: 80%;\"
               />
               <div class=\"card-body align-self-center\">
-                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\">{{p.Productname}}</h5></a>
+                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">{{p.Productname}}</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>{{p.Price}} VND</h6>
-                <a href=\"{{ path('home_page', {'id' : p.id})}}\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
-                                  <form>
-                  <input class=\"form-check-input\" name =\"checkbox\" type=\"checkbox\" value = \"{{p.id}}\" id=\"checkBox{{p.id}}\">
-                  <label class=\"form-check-label\" for=\"flexCheckDefault\">
-                    Add to compare
-                  </label>
-                <script language=\"javascript\">
-                  var compareList = [];
-                    document.getElementById(\"checkBox{{p.id}}\").onclick = function(e){
-                      if (this.checked){
-                        if(compareList.length < 2)
-                        {
-                          compareList.unshift({{p.id}});
-                          document.getElementById(\"proA\").value = compareList[0];
-                          document.getElementById(\"proB\").value = compareList[1];
-                        }
-                        else{
-                          alert('Max 2 products');
-                          document.getElementById(\"checkBox{{p.id}}\").checked = false;
-                        }
-                      }
-                      else{
-                        for (i = 0; i < compareList.length; ++i){
-                          if(compareList[i] == {{p.id}}){
-                            compareList.splice(i, 1);
-                          }
-                        }
-                      }
-                };
-                </script>
-                </form>
+                <a href=\"{{ path('home_page', {'id' : p.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
               </div>
             </div>
         </div>

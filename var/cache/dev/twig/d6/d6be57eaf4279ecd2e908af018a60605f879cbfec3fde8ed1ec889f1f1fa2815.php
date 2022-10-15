@@ -116,7 +116,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 <a href=\"";
             // line 51
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 51)]), "html", null, true);
-            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\">";
+            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 51), "html", null, true);
             echo "</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
@@ -129,7 +129,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 // line 54
                 echo "                <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addcart", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 54)]), "html", null, true);
-                echo "\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
+                echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 ";
             } else {
                 // line 56
@@ -228,10 +228,10 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 width: 80%;\"
               />
               <div class=\"card-body align-self-center\">
-                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\">{{p.Productname}}</h5></a>
+                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">{{p.Productname}}</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>{{p.Price}} VND</h6>
                 {% if app.user %}
-                <a href=\"{{ path('addcart', {'id' : p.id})}}\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
+                <a href=\"{{ path('addcart', {'id' : p.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 {% else %}
                 <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 {% endif %}  

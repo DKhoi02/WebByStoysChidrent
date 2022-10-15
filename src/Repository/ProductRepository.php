@@ -54,6 +54,21 @@ class ProductRepository extends ServiceEntityRepository
        ;
    }
 
+   /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function addressProduct($idShop)
+   {
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address')
+            ->innerJoin('p.shop', 's')
+           ->Where('p.id = :idShop')
+           ->setParameter('idShop', $idShop)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
       /**
     * @return Product[] Returns an array of Product objects
     */
