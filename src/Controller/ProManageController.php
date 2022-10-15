@@ -43,11 +43,13 @@ class ProManageController extends AbstractController
 
             $product->setProductname($data->getProductname());
             $product->setPrice($data->getPrice());
+            $product->setCostPrice($data->getCostPrice());
             $product->setProductdes($data->getProductdes());
             $product->setProductdate($data->getProductdate());
             $product->setProductquantity($data->getProductquantity());
             $product->setProductimage($file);
             $product->setBrandid($data->getBrandid());
+            $product->setShop($data->getShop());
             $product->setStatus($data->getStatus());
 
             $entity->persist($product);

@@ -81,12 +81,12 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         ";
         // line 35
         $this->displayBlock('nav', $context, $blocks);
-        // line 99
+        // line 100
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 101
+        // line 102
         echo "        ";
-        // line 128
+        // line 129
         echo "</html>
 ";
         
@@ -144,7 +144,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
         echo "\">ATN Shop</a>
     <a class=\"navbar-toggler\"  data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler\"style=\"background-color: rgba(26,148,255,255);\"><i class=\"fa fa-bars text-light\" ></i></span>
+      <span class=\"navbar-toggler\"style=\"background-color: rgb(255,20,147);\"><i class=\"fa fa-bars text-light\" ></i></span>
     </a>
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
@@ -181,14 +181,18 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
                 // line 57
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pro_manage");
                 echo "\">Product Management</a></li>
+                            <li><a class=\"dropdown-item\" href=\"";
+                // line 58
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_shopmanage");
+                echo "\">Shop Management</a></li>
                         </ul>
         </li>                  
                     ";
             }
-            // line 61
+            // line 62
             echo "                    ";
         }
-        // line 62
+        // line 63
         echo "        <li class=\"nav-item\">
                 </li>
                             <li class=\"nav-item\"> 
@@ -200,59 +204,59 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
      </ul> 
         <ul class=\"navbar-nav\">
                 ";
-        // line 72
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 72, $this->source); })()), "user", [], "any", false, false, false, 72)) {
-            // line 73
+        // line 73
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 73, $this->source); })()), "user", [], "any", false, false, false, 73)) {
+            // line 74
             echo "                    <li class=\"nav-item dropdown\">
                         <a class=\"nav-link dropdown-toggle text-light\"  href=\"#\" id=\"navbarDropdown\"
                         role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-user\" aria-hidden=\"true\" style=\"font-size:19px\"></i> ";
-            // line 75
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "user", [], "any", false, false, false, 75), "userIdentifier", [], "any", false, false, false, 75), "html", null, true);
+            // line 76
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 76, $this->source); })()), "user", [], "any", false, false, false, 76), "userIdentifier", [], "any", false, false, false, 76), "html", null, true);
             echo "</a>
                         <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 77
+            // line 78
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_order_history");
             echo "\"><i class=\"fa fa-history\" aria-hidden=\"true\"></i> Order history</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 78
+            // line 79
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile");
             echo "\"><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> Update account</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 79
+            // line 80
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\" style=\"font-size:20px\"></i> Log out</a></li>
                         </ul>
                     </li>
                 ";
         } else {
-            // line 82
+            // line 83
             echo "   
                      <li><a class=\"nav-item nav-link text-light\" href=\"";
-            // line 83
+            // line 84
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"></i> Login</a></li>
 \t\t\t\t\t <li><a class=\"nav-item nav-link text-light\" href=\"";
-            // line 84
+            // line 85
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"></i> Register</a></li>      
                 ";
         }
-        // line 86
+        // line 87
         echo "                    <li class=\"nav-item\">   
                     ";
-        // line 87
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 87, $this->source); })()), "user", [], "any", false, false, false, 87)) {
-            // line 88
+        // line 88
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 88, $this->source); })()), "user", [], "any", false, false, false, 88)) {
+            // line 89
             echo "                    <div class=\"navbar-nav ms-auto\"> 
                         <a class=\"nav-link text-light\" href=\"";
-            // line 89
+            // line 90
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cart");
             echo "\" ><i class=\"fa fa-shopping-cart\" style=\"font-size:25px\"></i> Cart</a>
                     </div>
                     ";
         }
-        // line 92
+        // line 93
         echo "                </li>
         </ul>      
     </div>
@@ -265,14 +269,14 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 99
+    // line 100
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 100
+        // line 101
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -286,7 +290,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     public function getDebugInfo()
     {
-        return array (  276 => 100,  269 => 99,  256 => 92,  250 => 89,  247 => 88,  245 => 87,  242 => 86,  237 => 84,  233 => 83,  230 => 82,  223 => 79,  219 => 78,  215 => 77,  210 => 75,  206 => 73,  204 => 72,  192 => 62,  189 => 61,  182 => 57,  178 => 56,  174 => 55,  170 => 54,  164 => 50,  161 => 49,  159 => 48,  154 => 46,  143 => 39,  139 => 36,  132 => 35,  122 => 29,  115 => 28,  105 => 25,  98 => 24,  90 => 128,  88 => 101,  85 => 99,  83 => 35,  77 => 31,  75 => 28,  72 => 27,  70 => 24,  53 => 9,  44 => 1,);
+        return array (  280 => 101,  273 => 100,  260 => 93,  254 => 90,  251 => 89,  249 => 88,  246 => 87,  241 => 85,  237 => 84,  234 => 83,  227 => 80,  223 => 79,  219 => 78,  214 => 76,  210 => 74,  208 => 73,  196 => 63,  193 => 62,  186 => 58,  182 => 57,  178 => 56,  174 => 55,  170 => 54,  164 => 50,  161 => 49,  159 => 48,  154 => 46,  143 => 39,  139 => 36,  132 => 35,  122 => 29,  115 => 28,  105 => 25,  98 => 24,  90 => 129,  88 => 102,  85 => 100,  83 => 35,  77 => 31,  75 => 28,  72 => 27,  70 => 24,  53 => 9,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -331,7 +335,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
     {# <a class=\"navbar-brand text-light\" href=\"{{path('home_page')}}\"><img src=\"../img/Logo_KTK_Shop.png\" width=\"160\" height=\"90\" alt=\"Image not available\"></a> #}
      <a class=\"navbar-brand text-light\" href=\"{{path('home_page')}}\">ATN Shop</a>
     <a class=\"navbar-toggler\"  data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler\"style=\"background-color: rgba(26,148,255,255);\"><i class=\"fa fa-bars text-light\" ></i></span>
+      <span class=\"navbar-toggler\"style=\"background-color: rgb(255,20,147);\"><i class=\"fa fa-bars text-light\" ></i></span>
     </a>
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
@@ -348,6 +352,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
                             <li><a class=\"dropdown-item\" href=\"{{path('app_order_management')}}\">Order Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_brand_management')}}\">Brand Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_pro_manage')}}\">Product Management</a></li>
+                            <li><a class=\"dropdown-item\" href=\"{{path('app_shopmanage')}}\">Shop Management</a></li>
                         </ul>
         </li>                  
                     {% endif %}

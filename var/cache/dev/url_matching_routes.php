@@ -30,6 +30,8 @@ return [
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegisterController::registerAction'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/shopmanage' => [[['_route' => 'app_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::indexAction'], null, null, null, false, false, null]],
+        '/addshopmanage' => [[['_route' => 'add_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

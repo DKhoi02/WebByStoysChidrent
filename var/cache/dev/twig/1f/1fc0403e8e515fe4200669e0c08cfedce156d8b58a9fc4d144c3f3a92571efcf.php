@@ -63,7 +63,7 @@ class __TwigTemplate_bc69da0651ed4c0d6e1be05cb97f910f7eb0fbffd94cf2e3b7885ebf5d2
 <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pro_manage");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     ";
         // line 9
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
@@ -107,7 +107,7 @@ class __TwigTemplate_bc69da0651ed4c0d6e1be05cb97f910f7eb0fbffd94cf2e3b7885ebf5d2
 <div  class=\"container\">
 <h1>Add New Product </h1>
 <br>
-<a href=\"{{path('app_pro_manage')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+<a href=\"{{path('app_pro_manage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}

@@ -33,5 +33,7 @@ return [
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegisterController::registerAction'], [], [['text', '/register']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
+    'app_shopmanage' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::indexAction'], [], [['text', '/shopmanage']], [], [], []],
+    'add_shopmanage' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], [], [['text', '/addshopmanage']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
 ];

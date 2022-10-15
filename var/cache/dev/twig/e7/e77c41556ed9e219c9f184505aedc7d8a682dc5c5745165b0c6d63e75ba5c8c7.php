@@ -63,7 +63,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
                     <h3>Manager Product</h3> <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addpromanage");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -123,7 +123,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
             // line 38
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatepromanage", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "productid", [], "any", false, false, false, 38)]), "html", null, true);
             echo "\" class=\"btn rounded-pill text-light\"
-                                         style=\"background-color: rgba(26,148,255,255);\"> Update </a>
+                                         style=\"background-color: rgb(255,105,180);\"> Update </a>
                                     </td>
                                 </tr>     
                                 ";
@@ -169,7 +169,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
 
     <div id=\"main\">
                 <div class=\"container\">
-                    <h3>Manager Product</h3> <a href=\"{{path('addpromanage')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+                    <h3>Manager Product</h3> <a href=\"{{path('addpromanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -200,7 +200,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
                                     <td>{{p.brandid}}</td>          
                                     <td>
                                         <a href=\"{{path('updatepromanage',{'id' : p.productid})}}\" class=\"btn rounded-pill text-light\"
-                                         style=\"background-color: rgba(26,148,255,255);\"> Update </a>
+                                         style=\"background-color: rgb(255,105,180);\"> Update </a>
                                     </td>
                                 </tr>     
                                 {% endfor %}                        

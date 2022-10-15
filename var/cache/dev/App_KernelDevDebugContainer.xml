@@ -274,6 +274,13 @@
         <argument type="service" id=".service_locator.GNc8e5B.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\ShopmanageController" class="App\Controller\ShopmanageController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.GNc8e5B.App\Controller\ShopmanageController"/>
+      </call>
+    </service>
     <service id="App\Form\AddProManageType" class="App\Form\AddProManageType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -282,6 +289,9 @@
     </service>
     <service id="App\Form\ChangPassType" class="App\Form\ChangPassType" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ProfileType" class="App\Form\ProfileType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ShopManageType" class="App\Form\ShopManageType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UpdateOrderType" class="App\Form\UpdateOrderType" autowire="true" autoconfigure="true">
@@ -855,6 +865,7 @@
         <argument>App\Form\AddProManageType</argument>
         <argument>App\Form\BrandManageType</argument>
         <argument>App\Form\ProfileType</argument>
+        <argument>App\Form\ShopManageType</argument>
         <argument>App\Form\UpdateOrderType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1939,7 +1950,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.B2twlv9"/>
+      <argument type="service" id=".service_locator.9k6TMXA"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4158,12 +4169,17 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ShopmanageController" class="App\Controller\ShopmanageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ShopmanageController" class="App\Controller\ShopmanageController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ShopmanageController" class="App\Controller\ShopmanageController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AddProManageType" class="App\Form\AddProManageType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AddProManageType" class="App\Form\AddProManageType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BrandManageType" class="App\Form\BrandManageType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\BrandManageType" class="App\Form\BrandManageType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProfileType" class="App\Form\ProfileType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ProfileType" class="App\Form\ProfileType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ShopManageType" class="App\Form\ShopManageType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ShopManageType" class="App\Form\ShopManageType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UpdateOrderType" class="App\Form\UpdateOrderType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UpdateOrderType" class="App\Form\UpdateOrderType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
@@ -4656,7 +4672,13 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.xvegmDO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.thMkJFd" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\ShopRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.GkJ2tSV" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountMamagementController::indexAction" type="service_closure" id=".service_locator.BE_HSvK"/>
@@ -4686,6 +4708,8 @@
         <argument key="App\Controller\ProManageController::updateProManageAction" type="service_closure" id=".service_locator.OPHNw6z"/>
         <argument key="App\Controller\RegisterController::registerAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\ShopmanageController::addShopAction" type="service_closure" id=".service_locator._zOjFxc"/>
+        <argument key="App\Controller\ShopmanageController::indexAction" type="service_closure" id=".service_locator.thMkJFd"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -4719,6 +4743,8 @@
         <argument key="App\Controller\ProManageController:updateProManageAction" type="service_closure" id=".service_locator.OPHNw6z"/>
         <argument key="App\Controller\RegisterController:registerAction" type="service_closure" id=".service_locator.tek_f4z"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\ShopmanageController:addShopAction" type="service_closure" id=".service_locator._zOjFxc"/>
+        <argument key="App\Controller\ShopmanageController:indexAction" type="service_closure" id=".service_locator.thMkJFd"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -4783,12 +4809,13 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.B2twlv9" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.9k6TMXA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AddProManageType" type="service_closure" id="App\Form\AddProManageType"/>
         <argument key="App\Form\BrandManageType" type="service_closure" id="App\Form\BrandManageType"/>
         <argument key="App\Form\ProfileType" type="service_closure" id="App\Form\ProfileType"/>
+        <argument key="App\Form\ShopManageType" type="service_closure" id="App\Form\ShopManageType"/>
         <argument key="App\Form\UpdateOrderType" type="service_closure" id="App\Form\UpdateOrderType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
@@ -4935,6 +4962,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.GNc8e5B" method="withContext"/>
     </service>
+    <service id=".service_locator.GNc8e5B.App\Controller\ShopmanageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ShopmanageController"/>
+      <argument>App\Controller\ShopmanageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.GNc8e5B" method="withContext"/>
+    </service>
     <service id=".service_locator.WOytlHA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5072,12 +5105,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.xvegmDO"/>
+      <argument type="service" id=".service_locator.GkJ2tSV"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.xvegmDO"/>
+      <argument type="service" id=".service_locator.GkJ2tSV"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -5781,7 +5814,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.xvegmDO"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.GkJ2tSV"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -5798,9 +5831,9 @@
     <service id=".service_locator.oI4xawC" alias=".service_locator.lxu3CGC"/>
     <service id=".service_locator.sAnSFE3" alias=".service_locator.2POTX54"/>
     <service id=".service_locator.UTO.dP0" alias=".service_locator.OPHNw6z"/>
-    <service id=".service_locator.PVtWKwd" alias=".service_locator.xvegmDO"/>
+    <service id=".service_locator.573c_KC" alias=".service_locator.GkJ2tSV"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.wzYyd8q" alias=".service_locator.B2twlv9"/>
+    <service id=".service_locator.CNEXma5" alias=".service_locator.9k6TMXA"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
     <service id=".service_locator.W9y3dzm" alias=".service_locator.GNc8e5B"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -5841,6 +5874,7 @@
     <service id=".service_locator.PFcZV6c" alias=".service_locator.2POTX54"/>
     <service id=".service_locator.Xa_ODZX" alias=".service_locator.OPHNw6z"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
+    <service id=".service_locator.u3DP42P" alias=".service_locator.thMkJFd"/>
     <service id=".service_locator.S3Bk2.h" alias=".service_locator.GNc8e5B"/>
     <service id=".service_locator.L0rFhJm" alias=".service_locator.GVyCdgr"/>
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>

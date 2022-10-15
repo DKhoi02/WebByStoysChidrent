@@ -76,11 +76,6 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
         // line 11
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_end');
         echo "
-
-    <a href=\"";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("confirmpassword");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Change password</button></a>
 </div>
 <br>
 ";
@@ -101,7 +96,7 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
 
     public function getDebugInfo()
     {
-        return array (  82 => 13,  77 => 11,  73 => 10,  69 => 9,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  77 => 11,  73 => 10,  69 => 9,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -117,8 +112,6 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
 {{ form_start(form) }}
 {{ form_row(form.username) }}
 {{ form_end(form) }}
-
-    <a href=\"{{path('confirmpassword')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Change password</button></a>
 </div>
 <br>
 {% endblock %}

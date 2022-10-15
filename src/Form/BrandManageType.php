@@ -30,7 +30,11 @@ class BrandManageType extends AbstractType{
             'expanded'=> true
         ])
         ->add('save', SubmitType::class, [
-            'label' => "Save"
+            'label' => "Save",
+            'attr' => [
+                'class' => "btn text-light",
+                'style' => "background-color: rgb(255,105,180);"
+             ]
         ]);        
     }
 }

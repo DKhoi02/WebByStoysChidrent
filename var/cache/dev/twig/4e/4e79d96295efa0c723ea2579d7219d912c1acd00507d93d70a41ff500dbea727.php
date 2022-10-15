@@ -63,7 +63,7 @@ class __TwigTemplate_850011a32c1c3b44ca2df656f8c2b122639b75aecf77f63a1baaede3594
 <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_brand_management");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\" style=\"background-color: rgb(255,105,180);>Back to index</button></a>
     ";
         // line 9
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
@@ -107,7 +107,7 @@ class __TwigTemplate_850011a32c1c3b44ca2df656f8c2b122639b75aecf77f63a1baaede3594
 <div  class=\"container\">
 <h1>Add New Brand </h1>
 <br>
-<a href=\"{{path('app_brand_management')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+<a href=\"{{path('app_brand_management')}}\"><button type=\"button\" class=\"btn btn-outline-primary\" style=\"background-color: rgb(255,105,180);>Back to index</button></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}

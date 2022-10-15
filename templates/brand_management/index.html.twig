@@ -5,7 +5,7 @@
 
     <div class="container" id="main">
                 <div className="page-heading pb-2 mt-4 mb-2 ">
-                    <h3>Manager Brand</h3> <a href="{{path('addbrandmanage')}}"><button type="button" class="btn btn-outline-primary">Insert</button></a>
+                    <h3>Manager Brand</h3> <a href="{{path('addbrandmanage')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Insert</button></a>
                 </div>
                 <div class="page-content">
                 <div class="btn-group" role="group" aria-label="Basic outlined example">
@@ -29,7 +29,7 @@
                                     <td>{{b.Branddes}}</td>
                                     <td>{{b.Status}}</td>
                                     <td>
-                                        <a href="{{path('updatebrandmanage', {'id' : b.id})}}"><button type="button" class="btn rounded-pill btn-outline-primary">Update</button></a>
+                                        <a href="{{path('updatebrandmanage', {'id' : b.id})}}"><button type="button" class="btn rounded-pill text-light" style="background-color: rgb(255,105,180);">Update</button></a>
                                     </td>
                                 </tr>     
                                 {% endfor %}                        

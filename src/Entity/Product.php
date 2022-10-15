@@ -31,11 +31,6 @@ class Product
     private $Price;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $oldPrice;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $Productdes;
@@ -123,17 +118,6 @@ class Product
         return $this;
     }
 
-    public function getOldPrice(): ?int
-    {
-        return $this->oldPrice;
-    }
-
-    public function setOldPrice(int $oldPrice): self
-    {
-        $this->oldPrice = $oldPrice;
-
-        return $this;
-    }
 
     public function getProductdes(): ?string
     {

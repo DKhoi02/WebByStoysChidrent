@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main style="min-height: calc(100vh - 116px - 56px - 246px);">
+<br>
+    <div id="main">
+                <div class="container">
+                    <h3>Manager Account</h3> <a href="{{path('add_shopmanage')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Insert</button></a>
+                </div>
+                <div class="page-content">
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+               
+                </div>
+                <div class="container mb-3">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Telephone</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for s in shop %}
+                                <tr>
+                                    <td>{{s.id}}</td>
+                                    <td>{{s.Telephone}}</td>          
+                                    <td>{{s.Address}}</td>          
+                                    <td>{{s.Email}}</td>          
+                                </tr>     
+                                {% endfor %}                        
+                        </tbody>
+                    </table>
+             </div>
+            </div>
+    </div>
+    </main>
+{% endblock %}

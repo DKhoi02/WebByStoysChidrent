@@ -65,7 +65,11 @@ class UserType extends AbstractType {
                 'widget' => 'single_text'
             ])
             ->add('save', SubmitType::class, [
-                'label' => "Save"
+                'label' => "Save",
+                'attr' => [
+                   'class' => "btn text-light",
+                   'style' => "background-color: rgb(255,105,180);"
+                ]
             ]);
     }
 }

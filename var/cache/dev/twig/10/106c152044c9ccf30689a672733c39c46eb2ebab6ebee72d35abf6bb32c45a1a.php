@@ -63,7 +63,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
                     <h3>Manager Account</h3> <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addaccountadmin");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -186,7 +186,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
 <br>
     <div id=\"main\">
                 <div class=\"container\">
-                    <h3>Manager Account</h3> <a href=\"{{path('addaccountadmin')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+                    <h3>Manager Account</h3> <a href=\"{{path('addaccountadmin')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">

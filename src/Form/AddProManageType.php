@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Brand;
 use App\Entity\Product;
+use App\Entity\Shop;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -38,6 +39,13 @@ class AddProManageType extends AbstractType{
                 'constraints' => [new Positive()],
                 'attr' => [
                 'min' => 0
+                ],
+                'label' => "Buy Price"
+            ])
+            ->add('CostPrice', IntegerType::class, [
+                'constraints' => [new Positive()],
+                'attr' => [
+                'min' => 0
                 ]
             ])
             ->add('Productdes',  TextareaType::class, [
@@ -60,16 +68,28 @@ class AddProManageType extends AbstractType{
                 'choice_label' =>'Brandname',
                 'label' => 'Brand'
             ])
+            ->add('shop', EntityType::class, [
+                'class' =>Shop::class,
+                'choice_label' =>'Address',
+                'label' => 'Shop'
+            ])
             ->add('Status', ChoiceType::class, 
             [
                 'choices' => [
                     'Available' => '1',
                     'Unavailable' => '0',
                 ],
-                'expanded' => true
+                'expanded' => true,
+                'attr' => [
+                    'style' => "accent-color: rgb(255,105,180);"
+                ]
             ])
             ->add('save', SubmitType::class, [
-                'label' => "Save"
+                'label' => "Save",
+                'attr' => [
+                    'class' => "btn text-light",
+                    'style' => "background-color: rgb(255,105,180);"
+                 ]
             ]);
     }
 }

@@ -63,7 +63,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                     <h3>Manager Brand</h3> <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addbrandmanage");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -107,7 +107,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                                         <a href=\"";
             // line 32
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatebrandmanage", ["id" => twig_get_attribute($this->env, $this->source, $context["b"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\"><button type=\"button\" class=\"btn rounded-pill btn-outline-primary\">Update</button></a>
+            echo "\"><button type=\"button\" class=\"btn rounded-pill text-light\" style=\"background-color: rgb(255,105,180);\">Update</button></a>
                                     </td>
                                 </tr>     
                                 ";
@@ -153,7 +153,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
 
     <div class=\"container\" id=\"main\">
                 <div className=\"page-heading pb-2 mt-4 mb-2 \">
-                    <h3>Manager Brand</h3> <a href=\"{{path('addbrandmanage')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Insert</button></a>
+                    <h3>Manager Brand</h3> <a href=\"{{path('addbrandmanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -177,7 +177,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                                     <td>{{b.Branddes}}</td>
                                     <td>{{b.Status}}</td>
                                     <td>
-                                        <a href=\"{{path('updatebrandmanage', {'id' : b.id})}}\"><button type=\"button\" class=\"btn rounded-pill btn-outline-primary\">Update</button></a>
+                                        <a href=\"{{path('updatebrandmanage', {'id' : b.id})}}\"><button type=\"button\" class=\"btn rounded-pill text-light\" style=\"background-color: rgb(255,105,180);\">Update</button></a>
                                     </td>
                                 </tr>     
                                 {% endfor %}                        
