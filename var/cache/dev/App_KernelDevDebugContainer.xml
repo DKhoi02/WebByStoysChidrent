@@ -4671,7 +4671,13 @@
         <argument key="repo" type="service_closure" id="App\Repository\ShopRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.xPEkWmI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.jgkDDuL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="rePro" type="service_closure" id="App\Repository\ProductRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LQSowzB" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountMamagementController::indexAction" type="service_closure" id=".service_locator.BE_HSvK"/>
@@ -4700,6 +4706,7 @@
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\ShopmanageController::addShopAction" type="service_closure" id=".service_locator._zOjFxc"/>
         <argument key="App\Controller\ShopmanageController::indexAction" type="service_closure" id=".service_locator.thMkJFd"/>
+        <argument key="App\Controller\ShopmanageController::testAction" type="service_closure" id=".service_locator.jgkDDuL"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -4732,6 +4739,7 @@
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\ShopmanageController:addShopAction" type="service_closure" id=".service_locator._zOjFxc"/>
         <argument key="App\Controller\ShopmanageController:indexAction" type="service_closure" id=".service_locator.thMkJFd"/>
+        <argument key="App\Controller\ShopmanageController:testAction" type="service_closure" id=".service_locator.jgkDDuL"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -5092,12 +5100,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.xPEkWmI"/>
+      <argument type="service" id=".service_locator.LQSowzB"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.xPEkWmI"/>
+      <argument type="service" id=".service_locator.LQSowzB"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -5801,7 +5809,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.xPEkWmI"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.LQSowzB"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -5817,7 +5825,7 @@
     <service id=".service_locator.oI4xawC" alias=".service_locator.lxu3CGC"/>
     <service id=".service_locator.sAnSFE3" alias=".service_locator.2POTX54"/>
     <service id=".service_locator.UTO.dP0" alias=".service_locator.OPHNw6z"/>
-    <service id=".service_locator.pFa_DZB" alias=".service_locator.xPEkWmI"/>
+    <service id=".service_locator.u8x5MdY" alias=".service_locator.LQSowzB"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.CNEXma5" alias=".service_locator.9k6TMXA"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -5860,6 +5868,7 @@
     <service id=".service_locator.Xa_ODZX" alias=".service_locator.OPHNw6z"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
     <service id=".service_locator.u3DP42P" alias=".service_locator.thMkJFd"/>
+    <service id=".service_locator.j56jzKQ" alias=".service_locator.jgkDDuL"/>
     <service id=".service_locator.S3Bk2.h" alias=".service_locator.GNc8e5B"/>
     <service id=".service_locator.L0rFhJm" alias=".service_locator.GVyCdgr"/>
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>

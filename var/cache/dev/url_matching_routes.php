@@ -29,6 +29,7 @@ return [
         '/shopmanage' => [[['_route' => 'app_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::indexAction'], null, null, null, false, false, null]],
         '/addshopmanage' => [[['_route' => 'add_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], null, null, null, false, false, null]],
         '/statistics' => [[['_route' => 'statistics', '_controller' => 'App\\Controller\\ShopmanageController::statisticsAction'], null, null, null, false, false, null]],
+        '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\ShopmanageController::testAction'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

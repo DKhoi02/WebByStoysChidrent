@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Mapping\OrderBy;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -142,6 +143,24 @@ class ProductRepository extends ServiceEntityRepository
        ;
    }
 
+    /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statistics()
+   {
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as result')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->groupBy('s.Address')
+            ->orderBy('total','DESC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+        //  ,  as result
 
 //    /**
 //     * @return Product[] Returns an array of Product objects

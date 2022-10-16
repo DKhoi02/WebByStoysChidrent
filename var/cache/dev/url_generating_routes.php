@@ -32,5 +32,6 @@ return [
     'app_shopmanage' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::indexAction'], [], [['text', '/shopmanage']], [], [], []],
     'add_shopmanage' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], [], [['text', '/addshopmanage']], [], [], []],
     'statistics' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::statisticsAction'], [], [['text', '/statistics']], [], [], []],
+    'test' => [[], ['_controller' => 'App\\Controller\\ShopmanageController::testAction'], [], [['text', '/test']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
 ];

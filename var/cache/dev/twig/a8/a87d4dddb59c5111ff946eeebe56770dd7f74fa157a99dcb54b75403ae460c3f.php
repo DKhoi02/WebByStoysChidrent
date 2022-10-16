@@ -63,14 +63,15 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
         <h3>Manager Statistics</h3>
     </div>
     <br>
+    <form method=\"POST\" action=\"/test\">
     <div class=\"container\" style=\"display: flex\">
-        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" >
+        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" name=\"sort\" id=\"sort\">
             <option value=\"1\">Choose how to sort</option>
             <option value=\"1\" >From high to low</option>
             <option value=\"2\" >From low to high</option>
         </select>
         <p style=\"color: #fff\">ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP</p>
-        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\">
+        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" name=\"typeSort\" id=\"typeSort\">
             <option value=\"4\">Choose type to sort</option>
             <option value=\"1\" >Number of Order</option>
             <option value=\"2\" >Number of Product</option>
@@ -81,12 +82,15 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
     <div class=\"container\">
         <br>
         <label>Choose time from:</label>
-        <input type=\"datetime-local\" id=\"timeFrom\" name=\"timeFrom\" >
+        <input type=\"datetime-local\" id=\"timeFrom\" name=\"timeFrom\">
         <br>
         <br>
         <label>Choose time to:</label>
         <input type=\"datetime-local\" id=\"timeTo\" name=\"timeTo\" >
+        <br><br>
+        <input class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Submit\"/> 
     </div>
+    </form>
 
     <div class=\"container mb-3\">
         <table class=\"table table-striped\">
@@ -100,7 +104,7 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
                 </tr>
             </thead>
                 ";
-        // line 57
+        // line 61
         echo "        </table>
     </div>
 </div>
@@ -123,7 +127,7 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
 
     public function getDebugInfo()
     {
-        return array (  104 => 57,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  108 => 61,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -138,14 +142,15 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
         <h3>Manager Statistics</h3>
     </div>
     <br>
+    <form method=\"POST\" action=\"/test\">
     <div class=\"container\" style=\"display: flex\">
-        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" >
+        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" name=\"sort\" id=\"sort\">
             <option value=\"1\">Choose how to sort</option>
             <option value=\"1\" >From high to low</option>
             <option value=\"2\" >From low to high</option>
         </select>
         <p style=\"color: #fff\">ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP</p>
-        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\">
+        <select class=\"form-select\" required=\"required\" style=\"width:200px, display: flex\" name=\"typeSort\" id=\"typeSort\">
             <option value=\"4\">Choose type to sort</option>
             <option value=\"1\" >Number of Order</option>
             <option value=\"2\" >Number of Product</option>
@@ -156,12 +161,15 @@ class __TwigTemplate_372d2eecdec41baf8a42c05dcc5497c555c1f8d97a5a468c80d2aff3be8
     <div class=\"container\">
         <br>
         <label>Choose time from:</label>
-        <input type=\"datetime-local\" id=\"timeFrom\" name=\"timeFrom\" >
+        <input type=\"datetime-local\" id=\"timeFrom\" name=\"timeFrom\">
         <br>
         <br>
         <label>Choose time to:</label>
         <input type=\"datetime-local\" id=\"timeTo\" name=\"timeTo\" >
+        <br><br>
+        <input class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\" type=\"submit\" value=\"Submit\"/> 
     </div>
+    </form>
 
     <div class=\"container mb-3\">
         <table class=\"table table-striped\">

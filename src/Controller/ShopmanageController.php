@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Shop;
 use App\Form\ShopManageType;
+use App\Repository\ProductRepository;
 use App\Repository\ShopRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -56,9 +57,29 @@ class ShopmanageController extends AbstractController
     /**
      * @Route("/statistics", name="statistics")
      */
-    public function statisticsAction(): Response
+    public function statisticsAction(Request $re): Response
     {
+        $sort = $re->request->get("sort");
+        $typeSort = $re->request->get("typeSort");
         
         return $this->render('shopmanage/statistics.html.twig', []);
     }
+
+
+    
+    /**
+     * @Route("/test", name="test")
+     */
+    public function testAction(Request $re, ProductRepository $rePro): Response
+    {
+        $sort = $re->request->get("sort");
+        $typeSort = $re->request->get("typeSort");
+        $timeFrom = $re->request->get("timeFrom");
+        $timeTo = $re->request->get("timeTo");
+
+        $result = $rePro->statistics(); 
+        
+        return $this->json($result);
+    }
+
 }
