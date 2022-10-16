@@ -28,6 +28,7 @@ return [
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/shopmanage' => [[['_route' => 'app_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::indexAction'], null, null, null, false, false, null]],
         '/addshopmanage' => [[['_route' => 'add_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], null, null, null, false, false, null]],
+        '/statistics' => [[['_route' => 'statistics', '_controller' => 'App\\Controller\\ShopmanageController::statisticsAction'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -135,7 +135,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 // line 56
                 echo "                <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-                echo "\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
+                echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 ";
             }
             // line 57
@@ -233,7 +233,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 {% if app.user %}
                 <a href=\"{{ path('addcart', {'id' : p.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 {% else %}
-                <a href=\"{{ path('app_login')}}\" class=\"btn btn-primary\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
+                <a href=\"{{ path('app_login')}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 {% endif %}  
               </div>
             </div>

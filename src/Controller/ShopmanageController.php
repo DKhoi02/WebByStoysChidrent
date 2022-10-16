@@ -24,7 +24,7 @@ class ShopmanageController extends AbstractController
         ]);
     }
 
-        /**
+    /**
      * @Route("/addshopmanage", name="add_shopmanage")
      */
     public function addShopAction(Request $req, ManagerRegistry $res): Response
@@ -51,5 +51,14 @@ class ShopmanageController extends AbstractController
         return $this->render('shopmanage/addShop.html.twig', [
             'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/statistics", name="statistics")
+     */
+    public function statisticsAction(): Response
+    {
+        
+        return $this->render('shopmanage/statistics.html.twig', []);
     }
 }

@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerXLEutUT\App_KernelDevDebugContainer([
     'container.build_hash' => 'XLEutUT',
-    'container.build_id' => '950a41f7',
-    'container.build_time' => 1665837965,
+    'container.build_id' => '2e4bc661',
+    'container.build_time' => 1665911976,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerXLEutUT');

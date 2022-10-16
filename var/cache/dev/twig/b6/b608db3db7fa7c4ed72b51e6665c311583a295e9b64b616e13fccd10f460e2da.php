@@ -55,6 +55,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">
         <link rel=\"stylesheet\" href=\"../public/style.css\"
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"href=\"http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css\">
         <!-- Google Fonts -->
         <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -66,27 +67,27 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
     <!-- My Script -->
     <script src=\"script.js\"></script>
         ";
-        // line 24
+        // line 25
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 27
+        // line 28
         echo "
         ";
-        // line 28
+        // line 29
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 31
+        // line 32
         echo "
         
     </head>
     <body>
         ";
-        // line 35
+        // line 36
         $this->displayBlock('nav', $context, $blocks);
-        // line 100
-        echo "        ";
-        $this->displayBlock('body', $context, $blocks);
         // line 102
         echo "        ";
-        // line 129
+        $this->displayBlock('body', $context, $blocks);
+        // line 104
+        echo "        ";
+        // line 131
         echo "</html>
 ";
         
@@ -94,14 +95,14 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 24
+    // line 25
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 25
+        // line 26
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -111,14 +112,14 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 28
+    // line 29
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 29
+        // line 30
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -128,18 +129,18 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 35
+    // line 36
     public function block_nav($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "nav"));
 
-        // line 36
+        // line 37
         echo "<nav class=\"navbar navbar-expand-lg\" style=\"background-color: rgb(255,105,180);\">   
   <div class=\"container-fluid\">
     ";
-        // line 39
+        // line 40
         echo "     <a class=\"navbar-brand text-light\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
         echo "\">ATN Shop</a>
@@ -150,49 +151,53 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
       <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
         <li class=\"nav-item\">
             <a class=\"nav-link text-light\" href=\"";
-        // line 46
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
         echo "\"><i class=\"fa fa-home\" aria-hidden=\"true\" style=\"font-size:22px\"></i> Home</a>
         </li>
         ";
-        // line 48
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48)) {
-            // line 49
+        // line 49
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49)) {
+            // line 50
             echo "        ";
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 50
+                // line 51
                 echo "        <li class=\"nav-item dropdown\" style=\"hover:background-color:red;\">
                         <a class=\"nav-link dropdown-toggle text-light\"  href=\"#\" id=\"navbarDropdown\" 
                         role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"> Management</a>
                         <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                             <li><a class=\"dropdown-item\" href=\"";
-                // line 54
+                // line 55
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account_mamagement");
                 echo "\" style=\"hover:background-color:red;\">Account Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-                // line 55
+                // line 56
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_order_management");
                 echo "\">Order Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-                // line 56
+                // line 57
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_brand_management");
                 echo "\">Brand Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-                // line 57
+                // line 58
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pro_manage");
                 echo "\">Product Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-                // line 58
+                // line 59
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_shopmanage");
                 echo "\">Shop Management</a></li>
+                            <li><a class=\"dropdown-item\" href=\"";
+                // line 60
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("statistics");
+                echo "\">Statistics</a></li>
                         </ul>
         </li>                  
                     ";
             }
-            // line 62
+            // line 64
             echo "                    ";
         }
-        // line 63
+        // line 65
         echo "        <li class=\"nav-item\">
                 </li>
                             <li class=\"nav-item\"> 
@@ -204,59 +209,59 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
      </ul> 
         <ul class=\"navbar-nav\">
                 ";
-        // line 73
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 73, $this->source); })()), "user", [], "any", false, false, false, 73)) {
-            // line 74
+        // line 75
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "user", [], "any", false, false, false, 75)) {
+            // line 76
             echo "                    <li class=\"nav-item dropdown\">
                         <a class=\"nav-link dropdown-toggle text-light\"  href=\"#\" id=\"navbarDropdown\"
                         role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fa fa-user\" aria-hidden=\"true\" style=\"font-size:19px\"></i> ";
-            // line 76
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 76, $this->source); })()), "user", [], "any", false, false, false, 76), "userIdentifier", [], "any", false, false, false, 76), "html", null, true);
+            // line 78
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "user", [], "any", false, false, false, 78), "userIdentifier", [], "any", false, false, false, 78), "html", null, true);
             echo "</a>
                         <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 78
+            // line 80
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_order_history");
             echo "\"><i class=\"fa fa-history\" aria-hidden=\"true\"></i> Order history</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 79
+            // line 81
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile");
             echo "\"><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> Update account</a></li>
                             <li><a class=\"dropdown-item\" href=\"";
-            // line 80
+            // line 82
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\" style=\"font-size:20px\"></i> Log out</a></li>
                         </ul>
                     </li>
                 ";
         } else {
-            // line 83
+            // line 85
             echo "   
                      <li><a class=\"nav-item nav-link text-light\" href=\"";
-            // line 84
+            // line 86
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"></i> Login</a></li>
 \t\t\t\t\t <li><a class=\"nav-item nav-link text-light\" href=\"";
-            // line 85
+            // line 87
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"></i> Register</a></li>      
                 ";
         }
-        // line 87
+        // line 89
         echo "                    <li class=\"nav-item\">   
                     ";
-        // line 88
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 88, $this->source); })()), "user", [], "any", false, false, false, 88)) {
-            // line 89
+        // line 90
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 90, $this->source); })()), "user", [], "any", false, false, false, 90)) {
+            // line 91
             echo "                    <div class=\"navbar-nav ms-auto\"> 
                         <a class=\"nav-link text-light\" href=\"";
-            // line 90
+            // line 92
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cart");
             echo "\" ><i class=\"fa fa-shopping-cart\" style=\"font-size:25px\"></i> Cart</a>
                     </div>
                     ";
         }
-        // line 93
+        // line 95
         echo "                </li>
         </ul>      
     </div>
@@ -269,14 +274,14 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     }
 
-    // line 100
+    // line 102
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 101
+        // line 103
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -290,7 +295,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
 
     public function getDebugInfo()
     {
-        return array (  280 => 101,  273 => 100,  260 => 93,  254 => 90,  251 => 89,  249 => 88,  246 => 87,  241 => 85,  237 => 84,  234 => 83,  227 => 80,  223 => 79,  219 => 78,  214 => 76,  210 => 74,  208 => 73,  196 => 63,  193 => 62,  186 => 58,  182 => 57,  178 => 56,  174 => 55,  170 => 54,  164 => 50,  161 => 49,  159 => 48,  154 => 46,  143 => 39,  139 => 36,  132 => 35,  122 => 29,  115 => 28,  105 => 25,  98 => 24,  90 => 129,  88 => 102,  85 => 100,  83 => 35,  77 => 31,  75 => 28,  72 => 27,  70 => 24,  53 => 9,  44 => 1,);
+        return array (  285 => 103,  278 => 102,  265 => 95,  259 => 92,  256 => 91,  254 => 90,  251 => 89,  246 => 87,  242 => 86,  239 => 85,  232 => 82,  228 => 81,  224 => 80,  219 => 78,  215 => 76,  213 => 75,  201 => 65,  198 => 64,  191 => 60,  187 => 59,  183 => 58,  179 => 57,  175 => 56,  171 => 55,  165 => 51,  162 => 50,  160 => 49,  155 => 47,  144 => 40,  140 => 37,  133 => 36,  123 => 30,  116 => 29,  106 => 26,  99 => 25,  91 => 131,  89 => 104,  86 => 102,  84 => 36,  78 => 32,  76 => 29,  73 => 28,  71 => 25,  53 => 9,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -308,6 +313,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">
         <link rel=\"stylesheet\" href=\"../public/style.css\"
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\"href=\"http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css\">
         <!-- Google Fonts -->
         <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -353,6 +359,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
                             <li><a class=\"dropdown-item\" href=\"{{path('app_brand_management')}}\">Brand Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_pro_manage')}}\">Product Management</a></li>
                             <li><a class=\"dropdown-item\" href=\"{{path('app_shopmanage')}}\">Shop Management</a></li>
+                            <li><a class=\"dropdown-item\" href=\"{{path('statistics')}}\">Statistics</a></li>
                         </ul>
         </li>                  
                     {% endif %}
