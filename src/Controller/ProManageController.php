@@ -93,6 +93,7 @@ class ProManageController extends AbstractController
             }
             $product->setBrandid($data->getBrandid());
             $product->setStatus($data->getStatus());
+            $product->setShop($data->getShop());
 
             $entity->persist($product);
             $entity->flush();

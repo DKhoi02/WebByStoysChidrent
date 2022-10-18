@@ -146,25 +146,213 @@ class ProductRepository extends ServiceEntityRepository
     /**
     * @return Product[] Returns an array of Product objects
     */
-    public function statistics()
+    public function statisticsDESCInterest($timeFrom, $timeTo)
    {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
        return $this->createQueryBuilder('p')
             ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
-            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as result')
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
             ->innerJoin('p.shop', 's')
             ->innerJoin('p.Orderdetailid', 'ord')
             ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('res','DESC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsDESCOrder($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('order','DESC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsDESCProduct($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('product','DESC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsDESCRevenue($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
             ->groupBy('s.Address')
             ->orderBy('total','DESC')
            ->getQuery()
            ->getResult()
        ;
    }
-        //  ,  as result
 
-//    /**
-//     * @return Product[] Returns an array of Product objects
-//     */
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsASCInterest($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('res','ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsASCOrder($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('order','ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsASCProduct($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('product','ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function statisticsASCRevenue($timeFrom, $timeTo)
+   {
+        $from = $timeFrom." 00:00:00";
+        $to   = $timeTo. " 23:59:59";
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->andWhere('o.Orderdate >= :from')
+            ->setParameter('from', $from )
+            ->andWhere('o.Orderdate <= :to')
+            ->setParameter('to', $to)
+            ->groupBy('s.Address')
+            ->orderBy('total','ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+       /**
+    * @return Product[] Returns an array of Product objects
+    */
+    public function indexStatistics()
+   {
+       return $this->createQueryBuilder('p')
+            ->select('s.Address as address, COUNT(o.id) as order, SUM(ord.OderProQuan) as product, SUM(ord.Total) as total, 
+            SUM(ord.Total - (ord.OderProQuan*p.CostPrice)) as res')
+            ->innerJoin('p.shop', 's')
+            ->innerJoin('p.Orderdetailid', 'ord')
+            ->innerJoin('ord.Orderid', 'o')
+            ->groupBy('s.Address')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+
 //    public function findByExampleField($value): array
 //    {
 //        return $this->createQueryBuilder('p')

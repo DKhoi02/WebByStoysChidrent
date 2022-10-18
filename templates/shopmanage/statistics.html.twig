@@ -8,31 +8,63 @@
         <h3>Manager Statistics</h3>
     </div>
     <br>
-    <form method="POST" action="/test">
+    <form method="POST" action="/statistics">
     <div class="container" style="display: flex">
         <select class="form-select" required="required" style="width:200px, display: flex" name="sort" id="sort">
-            <option value="1">Choose how to sort</option>
-            <option value="1" >From high to low</option>
-            <option value="2" >From low to high</option>
+            <option value="">Choose how to sort</option>
+            {% if sortValue == 1%}
+                <option value="1" selected>From high to low</option>
+                <option value="2" >From low to high</option>
+            {% elseif sortValue == 2 %}
+                <option value="1" >From high to low</option>
+                <option value="2" selected>From low to high</option>
+            {% else %}
+                <option value="1">From high to low</option>
+                <option value="2">From low to high</option>
+            {% endif %}
+
         </select>
         <p style="color: #fff">ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP_ATN_SHOP</p>
         <select class="form-select" required="required" style="width:200px, display: flex" name="typeSort" id="typeSort">
-            <option value="4">Choose type to sort</option>
-            <option value="1" >Number of Order</option>
-            <option value="2" >Number of Product</option>
-            <option value="3" >Revenue</option>
-            <option value="4" >Interest</option>
+                <option value="">Choose type to sort</option>
+            {% if typeSortValue == 1 %}
+                <option value="1" selected>Number of Order</option>
+                <option value="2" >Number of Product</option>
+                <option value="3" >Revenue</option>
+                <option value="4" >Interest</option>
+            {% elseif typeSortValue == 2 %}
+                <option value="1" >Number of Order</option>
+                <option value="2" selected>Number of Product</option>
+                <option value="3" >Revenue</option>
+                <option value="4" >Interest</option>
+            {% elseif typeSortValue == 3 %}
+                <option value="1" >Number of Order</option>
+                <option value="2" >Number of Product</option>
+                <option value="3" selected>Revenue</option>
+                <option value="4" >Interest</option>
+            {% elseif typeSortValue == 4 %}
+                <option value="1" >Number of Order</option>
+                <option value="2" >Number of Product</option>
+                <option value="3" >Revenue</option>
+                <option value="4" selected>Interest</option>
+            {% else %}
+                <option value="1" >Number of Order</option>
+                <option value="2" >Number of Product</option>
+                <option value="3" >Revenue</option>
+                <option value="4" >Interest</option>
+            {% endif %}
+
+
         </select>
     </div>
-    <div class="container">
+    <div class="container" >
         <br>
         <label>Choose time from:</label>
-        <input type="datetime-local" id="timeFrom" name="timeFrom">
-        <br>
+        <input required="required" id="timeFrom" class="form-control" type="date" name="timeFrom" value ={{timeFromFormat}} style="width:200px"/> 
         <br>
         <label>Choose time to:</label>
-        <input type="datetime-local" id="timeTo" name="timeTo" >
-        <br><br>
+        <input required="required" id="timeTo" class="form-control" type="date" name="timeTo" value ={{timeToFormat}} style="width:200px"/>
+        <br>
         <input class="btn text-light" style="background-color: rgb(255,105,180);" type="submit" value="Submit"/> 
     </div>
     </form>
@@ -48,16 +80,17 @@
                     <th scope="col">Interest</th>
                 </tr>
             </thead>
-                {# <tbody>
-                            {% for s in shop %}
+                <tbody>
+                            {% for r in result %}
                                 <tr>
-                                    <td>{{s.id}}</td>
-                                    <td>{{s.Telephone}}</td>          
-                                    <td>{{s.Address}}</td>          
-                                    <td>{{s.Email}}</td>          
+                                    <td>{{r.address}}</td>
+                                    <td>{{r.order}}</td>          
+                                    <td>{{r.product}}</td>          
+                                    <td>{{r.total}}</td>          
+                                    <td>{{r.res}}</td>          
                                 </tr>     
                                 {% endfor %}                        
-                        </tbody> #}
+                        </tbody>
         </table>
     </div>
 </div>
