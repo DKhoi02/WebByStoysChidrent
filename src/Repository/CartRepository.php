@@ -39,11 +39,6 @@ class CartRepository extends ServiceEntityRepository
         }
     }
 
-    // SELECT p.productimage, p.productname, cd.quantity, p.price 
-    // FROM user u, cart c, cart_detail cd, product p
-    // WHERE u.id = c.user_id AND c.id = cd.cart_id AND cd.product_id = p.id
-    // AND u.id = 10 AND c.id = 46;
-
     /**
     * @return Cart[] Returns an array of Cart objects
     */

@@ -225,13 +225,6 @@
         <argument type="service" id=".service_locator.GNc8e5B.App\Controller\CartController"/>
       </call>
     </service>
-    <service id="App\Controller\CompareProductController" class="App\Controller\CompareProductController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.GNc8e5B.App\Controller\CompareProductController"/>
-      </call>
-    </service>
     <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -287,7 +280,6 @@
     <service id="App\Form\BrandManageType" class="App\Form\BrandManageType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Form\ChangPassType" class="App\Form\ChangPassType" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ProfileType" class="App\Form\ProfileType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -326,10 +318,6 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ShopRepository" class="App\Repository\ShopRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="App\Repository\SupplierRepository" class="App\Repository\SupplierRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -2278,7 +2266,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.kgmHA1u"/>
+      <argument type="service" id=".service_locator.dtHFnjr"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4148,9 +4136,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CompareProductController" class="App\Controller\CompareProductController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CompareProductController" class="App\Controller\CompareProductController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\CompareProductController" class="App\Controller\CompareProductController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4198,8 +4183,6 @@
     <service id=".abstract.instanceof.App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ShopRepository" class="App\Repository\ShopRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ShopRepository" class="App\Repository\ShopRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SupplierRepository" class="App\Repository\SupplierRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\SupplierRepository" class="App\Repository\SupplierRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -4831,7 +4814,7 @@
         <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.kgmHA1u" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.dtHFnjr" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BrandRepository" type="service_closure" id="App\Repository\BrandRepository"/>
@@ -4841,7 +4824,6 @@
         <argument key="App\Repository\OrderRepository" type="service_closure" id="App\Repository\OrderRepository"/>
         <argument key="App\Repository\ProductRepository" type="service_closure" id="App\Repository\ProductRepository"/>
         <argument key="App\Repository\ShopRepository" type="service_closure" id="App\Repository\ShopRepository"/>
-        <argument key="App\Repository\SupplierRepository" type="service_closure" id="App\Repository\SupplierRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -4914,12 +4896,6 @@
     <service id=".service_locator.GNc8e5B.App\Controller\CartController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\CartController"/>
       <argument>App\Controller\CartController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.GNc8e5B" method="withContext"/>
-    </service>
-    <service id=".service_locator.GNc8e5B.App\Controller\CompareProductController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\CompareProductController"/>
-      <argument>App\Controller\CompareProductController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.GNc8e5B" method="withContext"/>
     </service>

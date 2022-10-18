@@ -14,7 +14,6 @@ return [
         '/addbrandmanage' => [[['_route' => 'addbrandmanage', '_controller' => 'App\\Controller\\BrandManagementController::addBrandManageAction'], null, null, null, false, false, null]],
         '/cart' => [[['_route' => 'app_cart', '_controller' => 'App\\Controller\\CartController::indexAction'], null, null, null, false, false, null]],
         '/order' => [[['_route' => 'order', '_controller' => 'App\\Controller\\CartController::orderAction'], null, null, null, false, false, null]],
-        '/compare/product' => [[['_route' => 'app_compare_product', '_controller' => 'App\\Controller\\CompareProductController::compareAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home_page_index', '_controller' => 'App\\Controller\\HomeController::indexActions'], null, null, null, false, false, null]],
         '/homepage' => [[['_route' => 'home_page', '_controller' => 'App\\Controller\\HomeController::indexAction'], null, null, null, false, false, null]],
         '/search' => [[['_route' => 'search', '_controller' => 'App\\Controller\\HomeController::searchAction'], null, null, null, false, false, null]],
