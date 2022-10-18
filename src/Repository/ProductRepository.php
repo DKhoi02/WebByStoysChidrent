@@ -90,9 +90,10 @@ class ProductRepository extends ServiceEntityRepository
     */
     public function findProductByName($productname)
    {
+    $productname = strtolower($productname);
        return $this->createQueryBuilder('p')
             ->select('p.id, p.Productname, p.Price, p.Productimage')
-           ->Where('p.Productname LIKE :productname')
+           ->Where('LOWER(p.Productname) LIKE :productname')
            ->setParameter('productname', "%${productname}%")
            ->andWhere('p.Status = 1')
            ->getQuery()
@@ -105,9 +106,10 @@ class ProductRepository extends ServiceEntityRepository
     */
     public function countProductByName($productname)
    {
+        $productname = strtolower($productname);
        return $this->createQueryBuilder('p')
             ->select('COUNT(p.id) as count')
-           ->Where('p.Productname LIKE :productname')
+           ->Where('LOWER(p.Productname) LIKE :productname')
            ->setParameter('productname', "%${productname}%")
            ->andWhere('p.Status = 1')
            ->getQuery()
@@ -127,21 +129,6 @@ class ProductRepository extends ServiceEntityRepository
         ->getArrayResult()
         ;
     }
-
-      /**
-    * @return Product[] Returns an array of Product objects
-    */
-    public function compareProducts($proIdA, $proIdB)
-   {
-       return $this->createQueryBuilder('p')
-            ->select('p.Productname, p.Price, p.Productimage, p.Productdes')
-           ->Where('p.id = :proIdA OR p.id = :proIdB')
-           ->setParameter('proIdA', "$proIdA")
-           ->setParameter('proIdB', "$proIdB")
-           ->getQuery()
-           ->getResult()
-       ;
-   }
 
     /**
     * @return Product[] Returns an array of Product objects
