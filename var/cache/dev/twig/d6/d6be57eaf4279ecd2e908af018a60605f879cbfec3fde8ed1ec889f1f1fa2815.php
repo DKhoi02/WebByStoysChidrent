@@ -114,7 +114,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 <a href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">";
+            echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\" width=\"382px\" height=\"48px\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 49), "html", null, true);
             echo "</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
@@ -224,7 +224,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
                 class=\"card-img-top\"
                 alt=\"Not image available\" style=\"margin: auto; width: 80%;\"/>
               <div class=\"card-body align-self-center text-center\">
-                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">{{p.Productname}}</h5></a>
+                <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\" width=\"382px\" height=\"48px\">{{p.Productname}}</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>{{p.Price}} VND</h6>
                 {% if app.user %}
                 <a href=\"{{ path('addcart', {'id' : p.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
