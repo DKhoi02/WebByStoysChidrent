@@ -48,8 +48,8 @@ class ProductRepository extends ServiceEntityRepository
        $entity = $this->getEntityManager();
        return $entity->createQuery('
        SELECT p.id as productid, p.Productname, p.Price,
-       p.Productdes, p.Productquantity, p.Productimage, b.id as brandid
-       FROM App\Entity\Product p, App\Entity\Brand b WHERE p.Brandid = b.id
+       p.Productdes, p.Productquantity, p.Productimage, b.Brandname as brandid, s.Email as email 
+       FROM App\Entity\Product p, App\Entity\Brand b, App\Entity\Shop s WHERE p.Brandid = b.id AND p.shop = s.id
        ')
        ->getArrayResult()
        ;

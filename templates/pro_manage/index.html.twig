@@ -21,7 +21,8 @@
                             <th scope="col">Descript</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Image</th>
-                            <th scope="col">BrandID</th>
+                            <th scope="col">Brand Name</th>
+                            <th scope="col">Email Shop</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,8 +33,10 @@
                                     <td>{{p.Price}}</td>
                                     <td>{{p.Productdes}}</td>
                                     <td>{{p.Productquantity}}</td>
-                                    <td>{{p.Productimage}}</td>
+                                    <td><img src="../img/{{p.Productimage}}"
+                                     alt="" width="100px" height="100px"></td>
                                     <td>{{p.brandid}}</td>          
+                                    <td>{{p.email}}</td>          
                                     <td>
                                         <a href="{{path('updatepromanage',{'id' : p.productid})}}" class="btn rounded-pill text-light"
                                          style="background-color: rgb(255,105,180);"> Update </a>

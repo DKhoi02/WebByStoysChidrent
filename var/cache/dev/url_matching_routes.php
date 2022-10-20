@@ -27,7 +27,6 @@ return [
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/shopmanage' => [[['_route' => 'app_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::indexAction'], null, null, null, false, false, null]],
         '/addshopmanage' => [[['_route' => 'add_shopmanage', '_controller' => 'App\\Controller\\ShopmanageController::addShopAction'], null, null, null, false, false, null]],
-        '/indexStatistics' => [[['_route' => 'indexStatistics', '_controller' => 'App\\Controller\\ShopmanageController::indexStatisticsAction'], null, null, null, false, false, null]],
         '/statistics' => [[['_route' => 'statistics', '_controller' => 'App\\Controller\\ShopmanageController::statisticsAction'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -37,12 +36,13 @@ return [
                     .'|cart/([^/]++)(*:57)'
                     .'|order/([^/]++)(*:78)'
                     .'|promanage/([^/]++)(*:103)'
+                    .'|shop/([^/]++)(*:124)'
                 .')'
-                .'|/addcart/([^/]++)(*:129)'
-                .'|/deletecart/([^/]++)(*:157)'
-                .'|/homepage/([^/]++)(*:183)'
-                .'|/orderdetail/([^/]++)(*:212)'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:248)'
+                .'|/addcart/([^/]++)(*:150)'
+                .'|/deletecart/([^/]++)(*:178)'
+                .'|/homepage/([^/]++)(*:204)'
+                .'|/orderdetail/([^/]++)(*:233)'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:269)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -50,11 +50,12 @@ return [
         57 => [[['_route' => 'updatecart', '_controller' => 'App\\Controller\\CartController::updateCartAction'], ['id'], null, null, false, true, null]],
         78 => [[['_route' => 'updateorder', '_controller' => 'App\\Controller\\OrderManagementController::updateOrderAction'], ['id'], null, null, false, true, null]],
         103 => [[['_route' => 'updatepromanage', '_controller' => 'App\\Controller\\ProManageController::updateProManageAction'], ['id'], null, null, false, true, null]],
-        129 => [[['_route' => 'addcart', '_controller' => 'App\\Controller\\CartController::addCartAction'], ['id'], null, null, false, true, null]],
-        157 => [[['_route' => 'deletecart', '_controller' => 'App\\Controller\\CartController::deleteCartAction'], ['id'], null, null, false, true, null]],
-        183 => [[['_route' => 'productDetail', '_controller' => 'App\\Controller\\HomeController::productDetailAction'], ['id'], null, null, false, true, null]],
-        212 => [[['_route' => 'orderdetail', '_controller' => 'App\\Controller\\OrderManagementController::orderDetailAction'], ['id'], null, null, false, true, null]],
-        248 => [
+        124 => [[['_route' => 'updateshop', '_controller' => 'App\\Controller\\ShopmanageController::indexStatisticsAction'], ['id'], null, null, false, true, null]],
+        150 => [[['_route' => 'addcart', '_controller' => 'App\\Controller\\CartController::addCartAction'], ['id'], null, null, false, true, null]],
+        178 => [[['_route' => 'deletecart', '_controller' => 'App\\Controller\\CartController::deleteCartAction'], ['id'], null, null, false, true, null]],
+        204 => [[['_route' => 'productDetail', '_controller' => 'App\\Controller\\HomeController::productDetailAction'], ['id'], null, null, false, true, null]],
+        233 => [[['_route' => 'orderdetail', '_controller' => 'App\\Controller\\OrderManagementController::orderDetailAction'], ['id'], null, null, false, true, null]],
+        269 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

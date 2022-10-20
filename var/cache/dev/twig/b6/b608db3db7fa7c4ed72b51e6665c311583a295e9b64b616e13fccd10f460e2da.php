@@ -241,7 +241,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
             // line 86
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"></i> Login</a></li>
-\t\t\t\t\t <li><a class=\"nav-item nav-link text-light\" href=\"";
+\t\t\t\t\t          <li><a class=\"nav-item nav-link text-light\" href=\"";
             // line 87
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"></i> Register</a></li>      
@@ -386,7 +386,7 @@ class __TwigTemplate_f6a9b8f510b891cc303aca4f645d4509ff913f23df5897ce34d9592a1b1
                     </li>
                 {% else %}   
                      <li><a class=\"nav-item nav-link text-light\" href=\"{{path('app_login')}}\"></i> Login</a></li>
-\t\t\t\t\t <li><a class=\"nav-item nav-link text-light\" href=\"{{path('app_register')}}\"></i> Register</a></li>      
+\t\t\t\t\t          <li><a class=\"nav-item nav-link text-light\" href=\"{{path('app_register')}}\"></i> Register</a></li>      
                 {% endif %}
                     <li class=\"nav-item\">   
                     {% if app.user %}

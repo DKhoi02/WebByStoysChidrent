@@ -60,7 +60,7 @@ class __TwigTemplate_70cd08e71f9d53332b92997d6cba275fbaa75e8426752c486c82451832c
 <br>
     <div id=\"main\">
                 <div class=\"container\">
-                    <h3>Manager Account</h3> <a href=\"";
+                    <h3>Manager Shop</h3> <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_shopmanage");
         echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
@@ -102,14 +102,21 @@ class __TwigTemplate_70cd08e71f9d53332b92997d6cba275fbaa75e8426752c486c82451832c
                                     <td>";
             // line 30
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["s"], "Email", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>          
+            echo "</td>  
+                                    <td>
+                                        <a href=\"";
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateshop", ["id" => twig_get_attribute($this->env, $this->source, $context["s"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            echo "\" class=\"btn rounded-pill text-light\"
+                                         style=\"background-color: rgb(255,105,180);\"> Update </a>
+                                    </td>        
                                 </tr>     
                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['s'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 36
         echo "                        
                         </tbody>
                     </table>
@@ -135,7 +142,7 @@ class __TwigTemplate_70cd08e71f9d53332b92997d6cba275fbaa75e8426752c486c82451832c
 
     public function getDebugInfo()
     {
-        return array (  113 => 32,  104 => 30,  100 => 29,  96 => 28,  92 => 27,  89 => 26,  85 => 25,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  120 => 36,  109 => 32,  104 => 30,  100 => 29,  96 => 28,  92 => 27,  89 => 26,  85 => 25,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -147,7 +154,7 @@ class __TwigTemplate_70cd08e71f9d53332b92997d6cba275fbaa75e8426752c486c82451832c
 <br>
     <div id=\"main\">
                 <div class=\"container\">
-                    <h3>Manager Account</h3> <a href=\"{{path('add_shopmanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
+                    <h3>Manager Shop</h3> <a href=\"{{path('add_shopmanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -169,7 +176,11 @@ class __TwigTemplate_70cd08e71f9d53332b92997d6cba275fbaa75e8426752c486c82451832c
                                     <td>{{s.id}}</td>
                                     <td>{{s.Telephone}}</td>          
                                     <td>{{s.Address}}</td>          
-                                    <td>{{s.Email}}</td>          
+                                    <td>{{s.Email}}</td>  
+                                    <td>
+                                        <a href=\"{{path('updateshop',{'id' : s.id})}}\" class=\"btn rounded-pill text-light\"
+                                         style=\"background-color: rgb(255,105,180);\"> Update </a>
+                                    </td>        
                                 </tr>     
                                 {% endfor %}                        
                         </tbody>

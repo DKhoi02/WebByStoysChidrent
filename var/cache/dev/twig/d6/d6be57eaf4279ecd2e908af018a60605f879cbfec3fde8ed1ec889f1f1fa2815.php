@@ -109,36 +109,34 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productimage", [], "any", false, false, false, 45), "html", null, true);
             echo "\"
                 class=\"card-img-top\"
-                alt=\"Not image available\" style=\"margin: auto;
-                width: 80%;\"
-              />
-              <div class=\"card-body align-self-center\">
+                alt=\"Not image available\" style=\"margin: auto; width: 80%;\"/>
+              <div class=\"card-body align-self-center text-center\">
                 <a href=\"";
-            // line 51
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 51)]), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             echo "\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 51), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 49), "html", null, true);
             echo "</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>";
-            // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 52), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 50), "html", null, true);
             echo " VND</h6>
                 ";
-            // line 53
-            if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53)) {
-                // line 54
+            // line 51
+            if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
+                // line 52
                 echo "                <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addcart", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 54)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addcart", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 52)]), "html", null, true);
                 echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 ";
             } else {
-                // line 56
+                // line 54
                 echo "                <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
                 echo "\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
                 ";
             }
-            // line 57
+            // line 55
             echo "  
               </div>
             </div>
@@ -149,10 +147,10 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 61
         echo "  </div>  
   ";
-        // line 65
+        // line 63
         echo "
 </div>
 ";
@@ -173,7 +171,7 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
 
     public function getDebugInfo()
     {
-        return array (  156 => 65,  153 => 63,  142 => 57,  136 => 56,  130 => 54,  128 => 53,  124 => 52,  118 => 51,  109 => 45,  99 => 40,  95 => 38,  59 => 3,  52 => 2,  35 => 1,);
+        return array (  154 => 63,  151 => 61,  140 => 55,  134 => 54,  128 => 52,  126 => 51,  122 => 50,  116 => 49,  109 => 45,  99 => 40,  95 => 38,  59 => 3,  52 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -224,10 +222,8 @@ class __TwigTemplate_e17286e4a620b651a686d123c7686521e2d87f6b9374d5b1c08de850367
               <img 
                 src=\"./img/{{p.Productimage}}\"
                 class=\"card-img-top\"
-                alt=\"Not image available\" style=\"margin: auto;
-                width: 80%;\"
-              />
-              <div class=\"card-body align-self-center\">
+                alt=\"Not image available\" style=\"margin: auto; width: 80%;\"/>
+              <div class=\"card-body align-self-center text-center\">
                 <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">{{p.Productname}}</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>{{p.Price}} VND</h6>
                 {% if app.user %}

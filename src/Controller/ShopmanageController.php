@@ -58,14 +58,31 @@ class ShopmanageController extends AbstractController
     }
 
     /**
-     * @Route("/indexStatistics", name="indexStatistics")
+     * @Route("/updateshop/{id}", name="updateshop")
      */
-    public function indexStatisticsAction(Request $re, ProductRepository $rePro): Response
+    public function indexStatisticsAction(Request $req, ManagerRegistry $res, int $id, ShopRepository $shop): Response
     {
-        $result = $rePro->indexStatistics();
+        $shop = $shop->find($id);
 
-        return $this->render('shopmanage/statistics.html.twig', [
-            'result' => $result
+        $form = $this->createForm(ShopManageType::class, $shop);
+
+        $form->handleRequest($req);
+        $entity = $res->getManager();
+
+        if($form->isSubmitted() && $form->isValid()){
+            $data = $form->getData();
+
+            $shop->setEmail($data->getEmail());
+            $shop->setTelephone($data->getTelePhone());
+            $shop->setAddress($data->getAddress());
+
+            $entity->persist($shop);
+            $entity->flush();
+
+            return $this->redirectToRoute('app_shopmanage', []);
+        }
+        return $this->render('shopmanage/addShop.html.twig', [
+            'form' => $form->createView()
         ]);
     }
 

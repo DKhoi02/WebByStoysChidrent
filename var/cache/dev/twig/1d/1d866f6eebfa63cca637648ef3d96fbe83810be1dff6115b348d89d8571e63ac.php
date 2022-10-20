@@ -62,7 +62,7 @@ class __TwigTemplate_d60e07d5593c448476f6a51281cd858ac7442e5a198e0388b48804d73ee
 <br>
 <a href=\"";
         // line 8
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_brand_management");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_shopmanage");
         echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     ";
         // line 9
@@ -107,7 +107,7 @@ class __TwigTemplate_d60e07d5593c448476f6a51281cd858ac7442e5a198e0388b48804d73ee
 <div  class=\"container\">
 <h1>Add New Shop </h1>
 <br>
-<a href=\"{{path('app_brand_management')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
+<a href=\"{{path('app_shopmanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}

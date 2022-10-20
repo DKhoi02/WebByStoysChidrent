@@ -44,10 +44,8 @@
               <img 
                 src="./img/{{p.Productimage}}"
                 class="card-img-top"
-                alt="Not image available" style="margin: auto;
-                width: 80%;"
-              />
-              <div class="card-body align-self-center">
+                alt="Not image available" style="margin: auto; width: 80%;"/>
+              <div class="card-body align-self-center text-center">
                 <a href="{{ path('productDetail', {'id' : p.id})}}" class="text-decoration-none"><h5 class="card-title text-center" style="color: rgb(255,105,180);">{{p.Productname}}</h5></a>
                 <h6 class="card-subtitle mb-2 text-muted text-center"><span></span>{{p.Price}} VND</h6>
                 {% if app.user %}

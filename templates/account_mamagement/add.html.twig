@@ -5,6 +5,11 @@
 {% if error == 1 %}
     <div class="alert alert-danger">Username already exists</div>
 {% endif %}
+<br>
+<h1>Add New Account Admin </h1>
+<br>
+<a href="{{path('app_account_mamagement')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Back to index</button></a>
+<br>
 {{ form_start(form) }}
 {{ form_row(form.username) }}
 {{ form_row(form.password.first) }}

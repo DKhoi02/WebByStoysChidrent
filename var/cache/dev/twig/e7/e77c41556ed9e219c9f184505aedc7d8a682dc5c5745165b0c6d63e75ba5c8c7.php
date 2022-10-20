@@ -79,49 +79,55 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
                             <th scope=\"col\">Descript</th>
                             <th scope=\"col\">Qty</th>
                             <th scope=\"col\">Image</th>
-                            <th scope=\"col\">BrandID</th>
+                            <th scope=\"col\">Brand Name</th>
+                            <th scope=\"col\">Email Shop</th>
                             </tr>
                         </thead>
                         <tbody>
                             ";
-        // line 28
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 29
+            // line 30
             echo "                                <tr>
                                     <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "productid", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                                    <td>";
             // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 31), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "productid", [], "any", false, false, false, 31), "html", null, true);
             echo "</td>
                                     <td>";
             // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 32), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productname", [], "any", false, false, false, 32), "html", null, true);
             echo "</td>
                                     <td>";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productdes", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Price", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                                     <td>";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productquantity", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productdes", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                                     <td>";
             // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productimage", [], "any", false, false, false, 35), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productquantity", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
-                                    <td>";
+                                    <td><img src=\"../img/";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "brandid", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "Productimage", [], "any", false, false, false, 36), "html", null, true);
+            echo "\"
+                                     alt=\"\" width=\"100px\" height=\"100px\"></td>
+                                    <td>";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "brandid", [], "any", false, false, false, 38), "html", null, true);
+            echo "</td>          
+                                    <td>";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "email", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>          
                                     <td>
                                         <a href=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatepromanage", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "productid", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatepromanage", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "productid", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\" class=\"btn rounded-pill text-light\"
                                          style=\"background-color: rgb(255,105,180);\"> Update </a>
                                     </td>
@@ -131,7 +137,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 45
         echo "                        
                         </tbody>
                     </table>
@@ -157,7 +163,7 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
 
     public function getDebugInfo()
     {
-        return array (  135 => 42,  124 => 38,  119 => 36,  115 => 35,  111 => 34,  107 => 33,  103 => 32,  99 => 31,  95 => 30,  92 => 29,  88 => 28,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  141 => 45,  130 => 41,  125 => 39,  121 => 38,  116 => 36,  112 => 35,  108 => 34,  104 => 33,  100 => 32,  96 => 31,  93 => 30,  89 => 29,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -185,7 +191,8 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
                             <th scope=\"col\">Descript</th>
                             <th scope=\"col\">Qty</th>
                             <th scope=\"col\">Image</th>
-                            <th scope=\"col\">BrandID</th>
+                            <th scope=\"col\">Brand Name</th>
+                            <th scope=\"col\">Email Shop</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -196,8 +203,10 @@ class __TwigTemplate_39018a935c0e1632e8ddbd79ce2badf8c87daba62064e307ad276ebf5d9
                                     <td>{{p.Price}}</td>
                                     <td>{{p.Productdes}}</td>
                                     <td>{{p.Productquantity}}</td>
-                                    <td>{{p.Productimage}}</td>
+                                    <td><img src=\"../img/{{p.Productimage}}\"
+                                     alt=\"\" width=\"100px\" height=\"100px\"></td>
                                     <td>{{p.brandid}}</td>          
+                                    <td>{{p.email}}</td>          
                                     <td>
                                         <a href=\"{{path('updatepromanage',{'id' : p.productid})}}\" class=\"btn rounded-pill text-light\"
                                          style=\"background-color: rgb(255,105,180);\"> Update </a>

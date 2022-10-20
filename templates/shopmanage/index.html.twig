@@ -27,7 +27,11 @@
                                     <td>{{s.id}}</td>
                                     <td>{{s.Telephone}}</td>          
                                     <td>{{s.Address}}</td>          
-                                    <td>{{s.Email}}</td>          
+                                    <td>{{s.Email}}</td>  
+                                    <td>
+                                        <a href="{{path('updateshop',{'id' : s.id})}}" class="btn rounded-pill text-light"
+                                         style="background-color: rgb(255,105,180);"> Update </a>
+                                    </td>        
                                 </tr>     
                                 {% endfor %}                        
                         </tbody>

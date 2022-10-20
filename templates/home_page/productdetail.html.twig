@@ -15,16 +15,20 @@
                 
                 <div class="col-lg-7 p-5">
                     <div class="product_description">
-                        <div class="product_name">Product Name: {{product.Productname}}</div>
+                      <div class="product_name">Product Name: {{product.Productname}}</div>
                         
-                        <div> <span class="product_price"></span>Price: {{product.Price}} VND</div>
+                      <div> <span class="product_price"></span>Price: {{product.Price}} VND</div>
                         
-                        <div><span class="product_info"><span>Decription: {{product.Productdes}}</div>   
+                      <div><span class="product_info"><span>Decription: {{product.Productdes}}</div>   
 
                         <div><span class="product_info"><span>Shop address: {{address}}</div>                     
                         <hr class="singleline">
                         <div class="card-body align-self-center">
-                            <a href="{{ path('addcart', {'id' : product.id})}}" class="btn text-light" style="background-color: rgb(255,105,180);">Add to Cart <i class="fa fa-shopping-cart" style="font-size:20px"></i></a>
+                          {% if app.user %}
+                          <a href="{{ path('addcart', {'id' : product.id})}}" class="btn text-light" style="background-color: rgb(255,105,180);">Add to Cart <i class="fa fa-shopping-cart" style="font-size:20px"></i></i></a>
+                          {% else %}
+                          <a href="{{ path('app_login')}}" class="btn text-light" style="background-color: rgb(255,105,180);">Add to Cart <i class="fa fa-shopping-cart" style="font-size:20px"></i></i></a>
+                          {% endif %} 
                         </div>
                         </div>
                     </div>
