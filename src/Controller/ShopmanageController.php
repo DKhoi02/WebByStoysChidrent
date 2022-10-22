@@ -18,7 +18,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 class ShopmanageController extends AbstractController
 {
     /**
-     * @Route("/shopmanage", name="app_shopmanage")
+     * @Route("/admin/shopmanage", name="app_shopmanage")
      */
     public function indexAction(ShopRepository $repo): Response
     {
@@ -29,7 +29,7 @@ class ShopmanageController extends AbstractController
     }
 
     /**
-     * @Route("/addshopmanage", name="add_shopmanage")
+     * @Route("/admin/addshopmanage", name="add_shopmanage")
      */
     public function addShopAction(Request $req, ManagerRegistry $res): Response
     {
@@ -58,7 +58,7 @@ class ShopmanageController extends AbstractController
     }
 
     /**
-     * @Route("/updateshop/{id}", name="updateshop")
+     * @Route("/admin/updateshop/{id}", name="updateshop")
      */
     public function indexStatisticsAction(Request $req, ManagerRegistry $res, int $id, ShopRepository $shop): Response
     {
@@ -87,7 +87,7 @@ class ShopmanageController extends AbstractController
     }
 
     /**
-     * @Route("/statistics", name="statistics")
+     * @Route("/admin/statistics", name="statistics")
      */
     public function statisticsAction(Request $re, ProductRepository $rePro): Response
     {

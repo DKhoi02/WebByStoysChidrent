@@ -14,7 +14,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 class BrandManagementController extends AbstractController
 {
     /**
-     * @Route("/brand/management", name="app_brand_management")
+     * @Route("/admin/brand/management", name="app_brand_management")
      */
     public function indexAction(BrandRepository $repo): Response
     {   $brand = $repo->FindAll();
@@ -24,7 +24,7 @@ class BrandManagementController extends AbstractController
     }
 
     /**
-     * @Route("/addbrandmanage", name="addbrandmanage")
+     * @Route("/admin/addbrandmanage", name="addbrandmanage")
      */
     public function addBrandManageAction(Request $req, ManagerRegistry $res): Response
     {
@@ -54,7 +54,7 @@ class BrandManagementController extends AbstractController
     }
 
     /**
-     * @Route("updatebrandmanage/{id}", name="updatebrandmanage")
+     * @Route("/admin/updatebrandmanage/{id}", name="updatebrandmanage")
      */
     public function updateBrandManageAction(BrandRepository $repo,int $id,Request $req, ManagerRegistry $res): Response
     {

@@ -70,12 +70,12 @@ class __TwigTemplate_96961e61f5c2a030c11a7616ab24c01e5934a21067174b636358ea9387f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<main style=\"min-height: calc(100vh - 116px - 56px - 246px);\">
+        echo "<main>
 <div class=\"col d-flex justify-content-center text-center\">
     <div class=\"form-outline mb-4\">
         <div class=\"container\">
         <form method=\"post\">
-        <br></br>
+        <br></br><br></br><br></br><br></br>
         <h1 class=\"h3 mb-3 font-weight-normal\"> L o g i n</h1>
 <div class=\"container\"
     ";
@@ -133,12 +133,12 @@ class __TwigTemplate_96961e61f5c2a030c11a7616ab24c01e5934a21067174b636358ea9387f
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<main style=\"min-height: calc(100vh - 116px - 56px - 246px);\">
+<main>
 <div class=\"col d-flex justify-content-center text-center\">
     <div class=\"form-outline mb-4\">
         <div class=\"container\">
         <form method=\"post\">
-        <br></br>
+        <br></br><br></br><br></br><br></br>
         <h1 class=\"h3 mb-3 font-weight-normal\"> L o g i n</h1>
 <div class=\"container\"
     {% if error %}

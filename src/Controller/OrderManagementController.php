@@ -15,7 +15,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 class OrderManagementController extends AbstractController
 {
     /**
-     * @Route("/order/management", name="app_order_management")
+     * @Route("/admin/order/management", name="app_order_management")
      */
     public function indexAction(OrderRepository $repo): Response
     {   $order = $repo->indexOrder();
@@ -26,7 +26,7 @@ class OrderManagementController extends AbstractController
 
     
     /**
-     * @Route("/orderdetail/{id}", name="orderdetail")
+     * @Route("/admin/orderdetail/{id}", name="orderdetail")
      */
     public function orderDetailAction(OrderDetailRepository $repo, int $id, OrderRepository $orepo): Response
     {
@@ -40,7 +40,7 @@ class OrderManagementController extends AbstractController
     }
 
     /**
-     * @Route("/updateorder/{id}", name="updateorder")
+     * @Route("/admin/updateorder/{id}", name="updateorder")
      */
     public function updateOrderAction(Request $req, ManagerRegistry $res, OrderRepository $orepo, int $id ): Response
     {

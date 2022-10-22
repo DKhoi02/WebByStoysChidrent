@@ -57,24 +57,25 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
 
         // line 4
         echo "<div class=\"container\">
+<br>
     <h3>Update Account</h3>
         <a href=\"";
-        // line 6
+        // line 7
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_page");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     </div>
 <div class=\"container\">
 ";
-        // line 9
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
-        echo "
-";
         // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "username", [], "any", false, false, false, 10), 'row');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'form_start');
         echo "
 ";
         // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_end');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "username", [], "any", false, false, false, 11), 'row');
+        echo "
+";
+        // line 12
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_end');
         echo "
 </div>
 <br>
@@ -96,7 +97,7 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
 
     public function getDebugInfo()
     {
-        return array (  77 => 11,  73 => 10,  69 => 9,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  78 => 12,  74 => 11,  70 => 10,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -105,8 +106,9 @@ class __TwigTemplate_3ebee0adb31c5c6f91df410eb01c93547bbc4021b9c4f41630fb6fb47f8
 
 {% block body %}
 <div class=\"container\">
+<br>
     <h3>Update Account</h3>
-        <a href=\"{{path('home_page')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        <a href=\"{{path('home_page')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     </div>
 <div class=\"container\">
 {{ form_start(form) }}

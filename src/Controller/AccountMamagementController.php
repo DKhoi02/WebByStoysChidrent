@@ -17,7 +17,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 class AccountMamagementController extends AbstractController
 {
     /**
-     * @Route("/account/mamagement", name="app_account_mamagement")
+     * @Route("/admin/account/mamagement", name="app_account_mamagement")
      */
     public function indexAction(UserRepository $repo): Response
     {
@@ -30,7 +30,7 @@ class AccountMamagementController extends AbstractController
     }
 
     /**
-     * @Route("/addaccountadmin", name="addaccountadmin")
+     * @Route("/admin/addaccountadmin", name="addaccountadmin")
      */
     public function registerAction(Request $req, 
     UserPasswordHasherInterface $hasher,

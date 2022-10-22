@@ -15,7 +15,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 class ProManageController extends AbstractController
 {
     /**
-     * @Route("/promanage", name="app_pro_manage")
+     * @Route("/admin/promanage", name="app_pro_manage")
      */
     public function indexAction(ProductRepository $repo): Response
     {
@@ -26,7 +26,7 @@ class ProManageController extends AbstractController
     }
 
     /**
-     * @Route("/addpromanage", name="addpromanage")
+     * @Route("/admin/addpromanage", name="addpromanage")
      */
     public function addProManageAction(Request $req, ManagerRegistry $res): Response
     {
@@ -63,7 +63,7 @@ class ProManageController extends AbstractController
     }
 
         /**
-     * @Route("/updatepromanage/{id}", name="updatepromanage")
+     * @Route("/admin/updatepromanage/{id}", name="updatepromanage")
      */
     public function updateProManageAction(Request $req, ManagerRegistry $res, int $id, ProductRepository $repo): Response
     {
