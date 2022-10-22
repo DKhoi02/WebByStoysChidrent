@@ -86,7 +86,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
                 alt=\"Not image available\" style=\"margin: auto;
                 width: 80%;\"
               />
-              <div class=\"card-body align-self-center\">
+              <div class=\"card-body align-self-center text-center\">
                 <a href=\"";
             // line 22
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("productDetail", ["id" => twig_get_attribute($this->env, $this->source, $context["p"], "id", [], "any", false, false, false, 22)]), "html", null, true);
@@ -157,7 +157,7 @@ class __TwigTemplate_65cd615e6138017e3ad4ff7fcc78ace4b90ac5664957642810b797ade3c
                 alt=\"Not image available\" style=\"margin: auto;
                 width: 80%;\"
               />
-              <div class=\"card-body align-self-center\">
+              <div class=\"card-body align-self-center text-center\">
                 <a href=\"{{ path('productDetail', {'id' : p.id})}}\" class=\"text-decoration-none\"><h5 class=\"card-title text-center\" style=\"color: rgb(255,105,180);\">{{p.Productname}}</h5></a>
                 <h6 class=\"card-subtitle mb-2 text-muted text-center\"><span></span>{{p.Price}} VND</h6>
                 <a href=\"{{ path('home_page', {'id' : p.id})}}\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Add to Cart <i class=\"fa fa-shopping-cart\" style=\"font-size:20px\"></i></i></a>
