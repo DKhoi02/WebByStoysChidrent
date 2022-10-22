@@ -109,9 +109,12 @@ class ProductRepository extends ServiceEntityRepository
     $productname = strtolower($productname);
        return $this->createQueryBuilder('p')
             ->select('p.id, p.Productname, p.Price, p.Productimage')
+            ->innerJoin('p.Brandid', 'b')
            ->Where('LOWER(p.Productname) LIKE :productname')
            ->setParameter('productname', "%${productname}%")
            ->andWhere('p.Status = 1')
+           ->andWhere('b.Status = 1')
+           ->andWhere('p.Productquantity > 0')
            ->getQuery()
            ->getResult()
        ;

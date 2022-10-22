@@ -41,6 +41,7 @@ class HomeController extends AbstractController
             'product' =>$product
         ]);
     }
+    
      /**
      * @Route("/homepage/{id}", name="productDetail")
      */
