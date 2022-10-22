@@ -25,9 +25,7 @@ class HomeController extends AbstractController
      */
     public function indexActions(ProductRepository $repo, CartRepository $cartrepo): Response
     {
-        $product = $repo->findBy([
-            'Status' => 1
-        ]);
+        $product = $repo->indexHome();
         return $this->render("home_page/index.html.twig",[
             'product' =>$product
         ]);
@@ -38,9 +36,7 @@ class HomeController extends AbstractController
      */
     public function indexAction(ProductRepository $repo, CartRepository $cartrepo): Response
     {
-        $product = $repo->findBy([
-            'Status' => 1
-        ]);
+        $product = $repo->indexHome();
         return $this->render("home_page/index.html.twig",[
             'product' =>$product
         ]);
