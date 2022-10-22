@@ -5,6 +5,7 @@
 
     <div class="container" id="main">
                 <div className="page-heading pb-2 mt-4 mb-2 ">
+                <br>
                     <h3>Manager Brand</h3> <a href="{{path('addbrandmanage')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Insert</button></a>
                 </div>
                 <div class="page-content">
@@ -16,8 +17,8 @@
                         <thead>
                             <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">BrandName</th>
-                            <th scope="col">Branddes</th>
+                            <th scope="col">Brand Name</th>
+                            <th scope="col">Brand Description</th>
                             <th scope="col">Status</th>
                             </tr>
                         </thead>
@@ -27,7 +28,11 @@
                                     <td>{{b.id}}</td>
                                     <td>{{b.Brandname}}</td>
                                     <td>{{b.Branddes}}</td>
-                                    <td>{{b.Status}}</td>
+                                    {% if b.Status == 1 %}
+                                    <td>Available</td>
+                                    {% else %}
+                                    <td>Unavailable</td>
+                                    {% endif %}
                                     <td>
                                         <a href="{{path('updatebrandmanage', {'id' : b.id})}}"><button type="button" class="btn rounded-pill text-light" style="background-color: rgb(255,105,180);">Update</button></a>
                                     </td>

@@ -60,8 +60,9 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
 
     <div class=\"container\" id=\"main\">
                 <div className=\"page-heading pb-2 mt-4 mb-2 \">
+                <br>
                     <h3>Manager Brand</h3> <a href=\"";
-        // line 8
+        // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addbrandmanage");
         echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
@@ -74,39 +75,47 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                         <thead>
                             <tr>
                             <th scope=\"col\">ID</th>
-                            <th scope=\"col\">BrandName</th>
-                            <th scope=\"col\">Branddes</th>
+                            <th scope=\"col\">Brand Name</th>
+                            <th scope=\"col\">Brand Description</th>
                             <th scope=\"col\">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             ";
-        // line 25
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["brand"]) || array_key_exists("brand", $context) ? $context["brand"] : (function () { throw new RuntimeError('Variable "brand" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["brand"]) || array_key_exists("brand", $context) ? $context["brand"] : (function () { throw new RuntimeError('Variable "brand" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["b"]) {
-            // line 26
+            // line 27
             echo "                                <tr>
                                     <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "id", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
-                                    <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "Brandname", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "id", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                                     <td>";
             // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "Branddes", [], "any", false, false, false, 29), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "Brandname", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                                     <td>";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "Status", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["b"], "Branddes", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
-                                    <td>
+                                    ";
+            // line 31
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["b"], "Status", [], "any", false, false, false, 31), 1))) {
+                // line 32
+                echo "                                    <td>Available</td>
+                                    ";
+            } else {
+                // line 34
+                echo "                                    <td>Unavailable</td>
+                                    ";
+            }
+            // line 36
+            echo "                                    <td>
                                         <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatebrandmanage", ["id" => twig_get_attribute($this->env, $this->source, $context["b"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updatebrandmanage", ["id" => twig_get_attribute($this->env, $this->source, $context["b"], "id", [], "any", false, false, false, 37)]), "html", null, true);
             echo "\"><button type=\"button\" class=\"btn rounded-pill text-light\" style=\"background-color: rgb(255,105,180);\">Update</button></a>
                                     </td>
                                 </tr>     
@@ -115,7 +124,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['b'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 40
         echo "                        
                         </tbody>
                     </table>
@@ -141,7 +150,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
 
     public function getDebugInfo()
     {
-        return array (  119 => 35,  109 => 32,  104 => 30,  100 => 29,  96 => 28,  92 => 27,  89 => 26,  85 => 25,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  128 => 40,  118 => 37,  115 => 36,  111 => 34,  107 => 32,  105 => 31,  101 => 30,  97 => 29,  93 => 28,  90 => 27,  86 => 26,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -153,6 +162,7 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
 
     <div class=\"container\" id=\"main\">
                 <div className=\"page-heading pb-2 mt-4 mb-2 \">
+                <br>
                     <h3>Manager Brand</h3> <a href=\"{{path('addbrandmanage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
@@ -164,8 +174,8 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                         <thead>
                             <tr>
                             <th scope=\"col\">ID</th>
-                            <th scope=\"col\">BrandName</th>
-                            <th scope=\"col\">Branddes</th>
+                            <th scope=\"col\">Brand Name</th>
+                            <th scope=\"col\">Brand Description</th>
                             <th scope=\"col\">Status</th>
                             </tr>
                         </thead>
@@ -175,7 +185,11 @@ class __TwigTemplate_2d715263d36cda8afb813709e66d3339bc4c0fb427b7ca06ba823ac1711
                                     <td>{{b.id}}</td>
                                     <td>{{b.Brandname}}</td>
                                     <td>{{b.Branddes}}</td>
-                                    <td>{{b.Status}}</td>
+                                    {% if b.Status == 1 %}
+                                    <td>Available</td>
+                                    {% else %}
+                                    <td>Unavailable</td>
+                                    {% endif %}
                                     <td>
                                         <a href=\"{{path('updatebrandmanage', {'id' : b.id})}}\"><button type=\"button\" class=\"btn rounded-pill text-light\" style=\"background-color: rgb(255,105,180);\">Update</button></a>
                                     </td>

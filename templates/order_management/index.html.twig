@@ -5,6 +5,7 @@
 
     <div id="main">
                 <div class="container ">
+                <br>
                     <h3>Manager Order</h3>
                 </div>
                 <div class="page-content">
@@ -15,38 +16,38 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">OrderDate</th>
-                            <th scope="col">DeliveryDate</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Payment</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">CustomerID</th>
+                            <th scope="col" class="text-center">ID</th>
+                            <th scope="col" class="text-center">OrderDate</th>
+                            <th scope="col" class="text-center">DeliveryDate</th>
+                            <th scope="col" class="text-center">Address</th>
+                            <th scope="col" class="text-center">Payment</th>
+                            <th scope="col" class="text-center">Status</th>
+                            <th scope="col" class="text-center">Customer Name</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for o in order %}
                                 <tr>
-                                    <td>{{o.Oid}}</td>
-                                    <td>{{o.Orderdate|date("m/d/Y")}}</td>
+                                    <td class="text-center">{{o.Oid}}</td>
+                                    <td class="text-center">{{o.Orderdate|date("m/d/Y")}}</td>
                                     {% if o.Deliverydate == null %}
-                                    <td>{{o.Deliverydate}}</td>
+                                    <td class="text-center">{{o.Deliverydate}}</td>
                                     {% else %}
-                                    <td>{{o.Deliverydate|date("m/d/Y")}}</td>
+                                    <td class="text-center">{{o.Deliverydate|date("m/d/Y")}}</td>
                                     {% endif %}
-                                    <td>{{o.Address}}</td>
-                                    <td>{{o.Payment}}</td>
+                                    <td class="text-center">{{o.Address}}</td>
+                                    <td class="text-center">{{o.Payment}}</td>
                                     {% if o.Status == 0 %}
-                                    <td>Delivering</td>
+                                    <td class="text-center">Delivering</td>
                                     {% else %}
-                                    <td>Delivered</td>
+                                    <td class="text-center">Delivered</td>
                                     {% endif %}
-                                    <td>{{o.user}}</td>          
+                                    <td class="text-center">{{o.user}}</td>          
                                     <td>
-                                        <a href="{{ path('updateorder', {'id' : o.Oid})}}" class="btn rounded-pill text-light" style="background-color: rgba(26,148,255,255);"> Update </a>
+                                        <a href="{{ path('updateorder', {'id' : o.Oid})}}" class="btn rounded-pill text-light" style="background-color: rgb(255,105,180);"> Update </a>
                                     </td>
                                     <td>
-                                        <a href="{{ path('orderdetail', {'id' : o.Oid})}}" class="btn rounded-pill text-light" style="background-color: rgba(26,148,255,255);"> Detail </a>
+                                        <a href="{{ path('orderdetail', {'id' : o.Oid})}}" class="btn rounded-pill text-light" style="background-color: rgb(255,105,180);"> Detail </a>
                                     </td>
                                 </tr>     
                                 {% endfor %}                        

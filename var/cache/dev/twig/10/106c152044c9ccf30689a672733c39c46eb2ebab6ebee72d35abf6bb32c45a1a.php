@@ -60,8 +60,9 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
 <br>
     <div id=\"main\">
                 <div class=\"container\">
+                <br>
                     <h3>Manager Account</h3> <a href=\"";
-        // line 8
+        // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addaccountadmin");
         echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
@@ -73,40 +74,40 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
                     <table class=\"table table-striped\">
                         <thead>
                             <tr>
-                            <th scope=\"col\">ID</th>
-                            <th scope=\"col\">Username</th>
-                            <th scope=\"col\">ROLE</th>
-                            <th scope=\"col\">CustomerName</th>
-                            <th scope=\"col\">Gender</th>
-                            <th scope=\"col\">BirthDay</th>
-                            <th scope=\"col\">Telephone</th>
-                            <th scope=\"col\">Address</th>
-                            <th scope=\"col\">Email</th>
+                            <th scope=\"col\" class=\"text-center\">ID</th>
+                            <th scope=\"col\" class=\"text-center\">Username</th>
+                            <th scope=\"col\" class=\"text-center\">ROLE</th>
+                            <th scope=\"col\" class=\"text-center\">CustomerName</th>
+                            <th scope=\"col\" class=\"text-center\">Gender</th>
+                            <th scope=\"col\" class=\"text-center\">BirthDay</th>
+                            <th scope=\"col\" class=\"text-center\">Telephone</th>
+                            <th scope=\"col\" class=\"text-center\">Address</th>
+                            <th scope=\"col\" class=\"text-center\">Email</th>
                             </tr>
                         </thead>
                         <tbody>
                             ";
-        // line 30
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["account"]) || array_key_exists("account", $context) ? $context["account"] : (function () { throw new RuntimeError('Variable "account" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["account"]) || array_key_exists("account", $context) ? $context["account"] : (function () { throw new RuntimeError('Variable "account" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 31
-            echo "                                <tr>
-                                    <td>";
             // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-                                    <td>";
+            echo "                                <tr>
+                                    <td class=\"text-center\">";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "username", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
-                                    <td>
+                                    <td class=\"text-center\">";
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "username", [], "any", false, false, false, 34), "html", null, true);
+            echo "</td>
+                                    <td class=\"text-center\">
                                     ";
-            // line 35
+            // line 36
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["c"], "roles", [], "any", false, false, false, 35));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["c"], "roles", [], "any", false, false, false, 36));
             foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-                // line 36
+                // line 37
                 echo "                                        ";
                 echo twig_escape_filter($this->env, $context["row"], "html", null, true);
                 echo "
@@ -115,32 +116,32 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['row'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 38
-            echo "                                    </td>
+            // line 39
+            echo "                                    </td class=\"text-center\">
                                     ";
-            // line 40
-            echo "                                    <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Fullname", [], "any", false, false, false, 40), "html", null, true);
-            echo "</td>
-                                    <td>";
             // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Gender", [], "any", false, false, false, 41), "html", null, true);
+            echo "                                    <td class=\"text-center\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Fullname", [], "any", false, false, false, 41), "html", null, true);
             echo "</td>
-                                    <td>";
+                                    <td class=\"text-center\">";
             // line 42
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Birthdate", [], "any", false, false, false, 42), "m/d/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Gender", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
-                                    <td>";
+                                    <td class=\"text-center\">";
             // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Telephone", [], "any", false, false, false, 43), "html", null, true);
-            echo "</td>          
-                                    <td>";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Birthdate", [], "any", false, false, false, 43), "m/d/Y"), "html", null, true);
+            echo "</td>
+                                    <td class=\"text-center\">";
             // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Address", [], "any", false, false, false, 44), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Telephone", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>          
-                                    <td>";
+                                    <td class=\"text-center\">";
             // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Email", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Address", [], "any", false, false, false, 45), "html", null, true);
+            echo "</td>          
+                                    <td class=\"text-center\">";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "Email", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>          
                                 </tr>     
                                 ";
@@ -148,7 +149,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 48
         echo "                        
                         </tbody>
                     </table>
@@ -174,7 +175,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
 
     public function getDebugInfo()
     {
-        return array (  152 => 47,  143 => 45,  139 => 44,  135 => 43,  131 => 42,  127 => 41,  122 => 40,  119 => 38,  110 => 36,  106 => 35,  101 => 33,  97 => 32,  94 => 31,  90 => 30,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  153 => 48,  144 => 46,  140 => 45,  136 => 44,  132 => 43,  128 => 42,  123 => 41,  120 => 39,  111 => 37,  107 => 36,  102 => 34,  98 => 33,  95 => 32,  91 => 31,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -186,6 +187,7 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
 <br>
     <div id=\"main\">
                 <div class=\"container\">
+                <br>
                     <h3>Manager Account</h3> <a href=\"{{path('addaccountadmin')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Insert</button></a>
                 </div>
                 <div class=\"page-content\">
@@ -196,34 +198,34 @@ class __TwigTemplate_b969973105b4e5f2c8b4f816bb82608c96b61f7083ccdb4b81caaac1b17
                     <table class=\"table table-striped\">
                         <thead>
                             <tr>
-                            <th scope=\"col\">ID</th>
-                            <th scope=\"col\">Username</th>
-                            <th scope=\"col\">ROLE</th>
-                            <th scope=\"col\">CustomerName</th>
-                            <th scope=\"col\">Gender</th>
-                            <th scope=\"col\">BirthDay</th>
-                            <th scope=\"col\">Telephone</th>
-                            <th scope=\"col\">Address</th>
-                            <th scope=\"col\">Email</th>
+                            <th scope=\"col\" class=\"text-center\">ID</th>
+                            <th scope=\"col\" class=\"text-center\">Username</th>
+                            <th scope=\"col\" class=\"text-center\">ROLE</th>
+                            <th scope=\"col\" class=\"text-center\">CustomerName</th>
+                            <th scope=\"col\" class=\"text-center\">Gender</th>
+                            <th scope=\"col\" class=\"text-center\">BirthDay</th>
+                            <th scope=\"col\" class=\"text-center\">Telephone</th>
+                            <th scope=\"col\" class=\"text-center\">Address</th>
+                            <th scope=\"col\" class=\"text-center\">Email</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for c in account %}
                                 <tr>
-                                    <td>{{c.id}}</td>
-                                    <td>{{c.username}}</td>
-                                    <td>
+                                    <td class=\"text-center\">{{c.id}}</td>
+                                    <td class=\"text-center\">{{c.username}}</td>
+                                    <td class=\"text-center\">
                                     {% for row in c.roles %}
                                         {{row}}
                                     {% endfor %}
-                                    </td>
+                                    </td class=\"text-center\">
                                     {# <td>{{(c.role)|json_encode }}</td> #}
-                                    <td>{{c.Fullname}}</td>
-                                    <td>{{c.Gender}}</td>
-                                    <td>{{c.Birthdate|date(\"m/d/Y\")}}</td>
-                                    <td>{{c.Telephone}}</td>          
-                                    <td>{{c.Address}}</td>          
-                                    <td>{{c.Email}}</td>          
+                                    <td class=\"text-center\">{{c.Fullname}}</td>
+                                    <td class=\"text-center\">{{c.Gender}}</td>
+                                    <td class=\"text-center\">{{c.Birthdate|date(\"m/d/Y\")}}</td>
+                                    <td class=\"text-center\">{{c.Telephone}}</td>          
+                                    <td class=\"text-center\">{{c.Address}}</td>          
+                                    <td class=\"text-center\">{{c.Email}}</td>          
                                 </tr>     
                                 {% endfor %}                        
                         </tbody>

@@ -57,30 +57,31 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
 
         // line 4
         echo "<div  class=\"container\">
+<br>
 <h1> Product Manage</h1>
 <br>
 <a href=\"";
-        // line 7
+        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_pro_manage");
         echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
     ";
-        // line 8
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), 'form_start');
+        // line 9
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
         echo "
     ";
-        // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'widget');
+        // line 10
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'widget');
         echo "
     <div class=\"form-group\">
     <input type=\"button\" id=\"click-input\" value=\"Choose file\" onclick=\"document.getElementById('file').click();\" name=\"files\"/>
     <label for=\"click-input\" id=\"file-name\" name=\"file-name\">";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 12, $this->source); })()), "Productimage", [], "any", false, false, false, 12), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 13, $this->source); })()), "Productimage", [], "any", false, false, false, 13), "html", null, true);
         echo "</label>
     <input type=\"file\" style=\"display:none;\" id=\"file\" name=\"file\">
     <input type=\"hidden\" name=\"oldimg\" value=\"";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 14, $this->source); })()), "Productimage", [], "any", false, false, false, 14), "html", null, true);
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 15, $this->source); })()), "Productimage", [], "any", false, false, false, 15), "html", null, true);
         echo "\">
     <script>
         inputElement = document.getElementById('file')
@@ -96,8 +97,8 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
     <br>
     <input type=\"submit\" value=\"Submit\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\"/>
     ";
-        // line 28
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'form_end');
         echo "
     <br>  
 </div>
@@ -119,7 +120,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
 
     public function getDebugInfo()
     {
-        return array (  100 => 28,  83 => 14,  78 => 12,  72 => 9,  68 => 8,  64 => 7,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  101 => 29,  84 => 15,  79 => 13,  73 => 10,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -128,6 +129,7 @@ class __TwigTemplate_235a2da363d97298ff6e5bfe414fbcaa95fc3950e7bec6975b6b0df2eca
 
 {% block body %}
 <div  class=\"container\">
+<br>
 <h1> Product Manage</h1>
 <br>
 <a href=\"{{path('app_pro_manage')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>

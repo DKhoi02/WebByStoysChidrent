@@ -60,11 +60,12 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
 
     <div id=\"main\">
                 <div class=\"container\">
+                <br>
                     <h3>Order Detail</h3>
                     <a href=\"";
-        // line 9
+        // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_order_management");
-        echo "\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+        echo "\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -74,48 +75,48 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
                     <table class=\"table table-striped\">
                         <thead>
                             <tr>
-                            <th scope=\"col\">Order_ID</th>
-                            <th scope=\"col\">OrderDetail_ID</th>
-                            <th scope=\"col\">Product_ID</th>
-                            <th scope=\"col\">Pro_Qty</th>
-                            <th scope=\"col\">Price</th>
-                            <th scope=\"col\">Total</th><span class=\"badge bg-info text-dark\">Summary: ";
-        // line 24
-        echo twig_escape_filter($this->env, (isset($context["payment"]) || array_key_exists("payment", $context) ? $context["payment"] : (function () { throw new RuntimeError('Variable "payment" does not exist.', 24, $this->source); })()), "html", null, true);
+                            <th scope=\"col\" class=\"text-center\">Order ID</th>
+                            <th scope=\"col\" class=\"text-center\">OrderDetail ID</th>
+                            <th scope=\"col\" class=\"text-center\">Product Name</th>
+                            <th scope=\"col\" class=\"text-center\">Product Quantity</th>
+                            <th scope=\"col\" class=\"text-center\">Price</th>
+                            <th scope=\"col\" class=\"text-center\">Total</th><span class=\"badge text-dark\" style=\"background-color: rgb(255,105,180);\">Summary: ";
+        // line 25
+        echo twig_escape_filter($this->env, (isset($context["payment"]) || array_key_exists("payment", $context) ? $context["payment"] : (function () { throw new RuntimeError('Variable "payment" does not exist.', 25, $this->source); })()), "html", null, true);
         echo " VND</span>
                             </tr>
                         </thead>
                         <tbody>
                             ";
-        // line 28
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["detail"]) || array_key_exists("detail", $context) ? $context["detail"] : (function () { throw new RuntimeError('Variable "detail" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["detail"]) || array_key_exists("detail", $context) ? $context["detail"] : (function () { throw new RuntimeError('Variable "detail" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["d"]) {
-            // line 29
-            echo "                            <tr>
-                            <td>";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "order", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                            <td>";
+            echo "                            <tr>
+                            <td class=\"text-center\">";
             // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "odid", [], "any", false, false, false, 31), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "order", [], "any", false, false, false, 31), "html", null, true);
             echo "</td>
-                            <td>";
+                            <td class=\"text-center\">";
             // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "product", [], "any", false, false, false, 32), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "odid", [], "any", false, false, false, 32), "html", null, true);
             echo "</td>
-                            <td>";
+                            <td class=\"text-center\">";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "quantity", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "product", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
-                            <td>";
+                            <td class=\"text-center\">";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "price", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "quantity", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
-                            <td>";
+                            <td class=\"text-center\">";
             // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "total", [], "any", false, false, false, 35), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "price", [], "any", false, false, false, 35), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\">";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["d"], "total", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                             </tr>
                             ";
@@ -123,7 +124,7 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['d'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 38
         echo "   
                         </tbody>
                     </table>
@@ -149,7 +150,7 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
 
     public function getDebugInfo()
     {
-        return array (  127 => 37,  118 => 35,  114 => 34,  110 => 33,  106 => 32,  102 => 31,  98 => 30,  95 => 29,  91 => 28,  84 => 24,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  128 => 38,  119 => 36,  115 => 35,  111 => 34,  107 => 33,  103 => 32,  99 => 31,  96 => 30,  92 => 29,  85 => 25,  67 => 10,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -161,8 +162,9 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
 
     <div id=\"main\">
                 <div class=\"container\">
+                <br>
                     <h3>Order Detail</h3>
-                    <a href=\"{{path('app_order_management')}}\"><button type=\"button\" class=\"btn btn-outline-primary\">Back to index</button></a>
+                    <a href=\"{{path('app_order_management')}}\"><button type=\"button\" class=\"btn text-light\" style=\"background-color: rgb(255,105,180);\">Back to index</button></a>
                 </div>
                 <div class=\"page-content\">
                 <div class=\"btn-group\" role=\"group\" aria-label=\"Basic outlined example\">
@@ -172,23 +174,23 @@ class __TwigTemplate_28c635d168dda0fe4529504009ef7a15a2ad8cfaadf140c7275aba87c0d
                     <table class=\"table table-striped\">
                         <thead>
                             <tr>
-                            <th scope=\"col\">Order_ID</th>
-                            <th scope=\"col\">OrderDetail_ID</th>
-                            <th scope=\"col\">Product_ID</th>
-                            <th scope=\"col\">Pro_Qty</th>
-                            <th scope=\"col\">Price</th>
-                            <th scope=\"col\">Total</th><span class=\"badge bg-info text-dark\">Summary: {{payment}} VND</span>
+                            <th scope=\"col\" class=\"text-center\">Order ID</th>
+                            <th scope=\"col\" class=\"text-center\">OrderDetail ID</th>
+                            <th scope=\"col\" class=\"text-center\">Product Name</th>
+                            <th scope=\"col\" class=\"text-center\">Product Quantity</th>
+                            <th scope=\"col\" class=\"text-center\">Price</th>
+                            <th scope=\"col\" class=\"text-center\">Total</th><span class=\"badge text-dark\" style=\"background-color: rgb(255,105,180);\">Summary: {{payment}} VND</span>
                             </tr>
                         </thead>
                         <tbody>
                             {% for d in detail %}
                             <tr>
-                            <td>{{d.order}}</td>
-                            <td>{{d.odid}}</td>
-                            <td>{{d.product}}</td>
-                            <td>{{d.quantity}}</td>
-                            <td>{{d.price}}</td>
-                            <td>{{d.total}}</td>
+                            <td class=\"text-center\">{{d.order}}</td>
+                            <td class=\"text-center\">{{d.odid}}</td>
+                            <td class=\"text-center\">{{d.product}}</td>
+                            <td class=\"text-center\">{{d.quantity}}</td>
+                            <td class=\"text-center\">{{d.price}}</td>
+                            <td class=\"text-center\">{{d.total}}</td>
                             </tr>
                             {% endfor %}   
                         </tbody>

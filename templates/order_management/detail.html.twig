@@ -5,8 +5,9 @@
 
     <div id="main">
                 <div class="container">
+                <br>
                     <h3>Order Detail</h3>
-                    <a href="{{path('app_order_management')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
+                    <a href="{{path('app_order_management')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Back to index</button></a>
                 </div>
                 <div class="page-content">
                 <div class="btn-group" role="group" aria-label="Basic outlined example">
@@ -16,23 +17,23 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                            <th scope="col">Order_ID</th>
-                            <th scope="col">OrderDetail_ID</th>
-                            <th scope="col">Product_ID</th>
-                            <th scope="col">Pro_Qty</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Total</th><span class="badge bg-info text-dark">Summary: {{payment}} VND</span>
+                            <th scope="col" class="text-center">Order ID</th>
+                            <th scope="col" class="text-center">OrderDetail ID</th>
+                            <th scope="col" class="text-center">Product Name</th>
+                            <th scope="col" class="text-center">Product Quantity</th>
+                            <th scope="col" class="text-center">Price</th>
+                            <th scope="col" class="text-center">Total</th><span class="badge text-dark" style="background-color: rgb(255,105,180);">Summary: {{payment}} VND</span>
                             </tr>
                         </thead>
                         <tbody>
                             {% for d in detail %}
                             <tr>
-                            <td>{{d.order}}</td>
-                            <td>{{d.odid}}</td>
-                            <td>{{d.product}}</td>
-                            <td>{{d.quantity}}</td>
-                            <td>{{d.price}}</td>
-                            <td>{{d.total}}</td>
+                            <td class="text-center">{{d.order}}</td>
+                            <td class="text-center">{{d.odid}}</td>
+                            <td class="text-center">{{d.product}}</td>
+                            <td class="text-center">{{d.quantity}}</td>
+                            <td class="text-center">{{d.price}}</td>
+                            <td class="text-center">{{d.total}}</td>
                             </tr>
                             {% endfor %}   
                         </tbody>

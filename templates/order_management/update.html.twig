@@ -3,9 +3,10 @@
 {% block body %}
 
 <div  class="container">
+<br>
 <h1>Update Order </h1>
 <br>
-<a href="{{path('app_order_management')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
+<a href="{{path('app_order_management')}}"><button type="button" class="btn text-light" style="background-color: rgb(255,105,180);">Back to index</button></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}
     {{ form_end(form) }}
